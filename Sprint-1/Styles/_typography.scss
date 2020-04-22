@@ -1,0 +1,25 @@
+@font-face{
+    font-family: "Avenir-Bold";
+    src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+@mixin h1{
+font-size: 24px; 
+line-height: 32px;
+}
+
+@mixin h2{
+    font-size: 14px; 
+    line-height: 22px;
+    }
+
+@mixin h4{
+    font-size: 13px; 
+    line-height: 18px;
+    }
+
+@mixin h5{
+    font-size: 12px; 
+    line-height: 20px;
+    }
+    

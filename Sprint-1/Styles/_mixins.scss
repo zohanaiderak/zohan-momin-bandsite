@@ -1,4 +1,4 @@
-@import './_variables.scss';
+@import '_variables.scss';
 
 @mixin tablet{
     @media screen and (min-width: 768px) { @content; }   
@@ -8,6 +8,10 @@
     @media screen and (min-width:1440px) {
         @content;
     }   
+}
+
+@mixin footer-spacing{
+    padding: 40px 0;
 }
 
 @mixin div2{

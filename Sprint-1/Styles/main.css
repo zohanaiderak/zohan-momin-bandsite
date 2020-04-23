@@ -170,5 +170,41 @@
 .footer {
   padding: 0 16px;
   background-color: #323232;
+  color: #fafafa;
+}
+
+.footer__head {
+  font-size: 36px;
+  padding: 40px 0;
+}
+
+.footer__icon-img {
+  height: 2rem;
+  padding-right: 2rem;
+}
+
+.footer__site-name {
+  display: none;
+}
+
+.footer .copyright {
+  padding-bottom: 40px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.contact__mgmt:nth-of-type(odd) {
+  padding: 40px 0;
+}
+
+.contact__mgmt--name {
+  font-family: "Avenir-Medium";
+}
+
+.contact__mgmt--add {
+  font-family: "Avenir-Light";
+  font-size: 13px;
+  line-height: 18px;
+  padding-top: 15px;
 }
 /*# sourceMappingURL=main.css.map */

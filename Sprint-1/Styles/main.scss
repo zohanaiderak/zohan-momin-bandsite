@@ -46,14 +46,14 @@
     align-items: center;
     &__head{
         color: $secondary-color;
-        @include h1;
+        @include h1-mobile;
     }
 }
 
 .article{
     @include padding-mobile;
     &__header{
-        @include h1;
+        @include h1-mobile;
         padding: 32px 0 24px;
     }
     &__img{
@@ -74,8 +74,7 @@
     }
     &__para{
       display: flex;
-      @include h4;
-      font-family: "Avenir-Light";
+      @include h4-mobile;
     }
     .para1{
       padding-bottom: 24px;
@@ -100,8 +99,37 @@
 .footer{
   @include padding-mobile;
   background-color: $primary-color;
+  color: $secondary-color;
   &__head{
     @extend .hero__head;
+    font-size: 36px;
+    @include footer-spacing;
+  }
+  &__icon-img{
+    height: 2rem;
+    padding-right:2rem ;    
+  }
+  &__site-name{
+    display: none;
+  }
+  .copyright{
+    padding-bottom: 40px;
+    @include h4-mobile; 
+  }
+}
+
+.contact{
+  &__mgmt:nth-of-type(odd){
+    @include footer-spacing;
+  }
+  &__mgmt{
+    &--name{
+      font-family: $font-medium;
+    }
+    &--add{
+      @include h4-mobile;
+      padding-top: 15px ;
+    }
   }
 }
 

@@ -1,3 +1,5 @@
+@import '_variables.scss'
+
 @font-face{
     font-family: "Avenir-Bold";
     src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf"),
@@ -28,24 +30,20 @@
          url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Light.ttf");
 }
 
-@mixin h1{
+@mixin h1-mobile{
 font-family: "Avenir-Bold";
 font-size: 24px; 
 line-height: 32px;
 }
 
-@mixin h2{
+@mixin h2-mobile{
     font-size: 14px; 
     line-height: 22px;
     }
 
-@mixin h4{
+@mixin h4-mobile{
     font-size: 13px; 
     line-height: 18px;
-    }
-
-@mixin h5{
-    font-size: 12px; 
-    line-height: 20px;
+    font-family: $font-Light;
     }
     

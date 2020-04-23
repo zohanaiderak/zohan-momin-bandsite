@@ -4,12 +4,12 @@
 
 *{
     padding: 0;
-    margin: 0;
-    font-family: 'Avenir';   
+    margin: 0;  
+    font-family: "Avenir"; 
 }
   
   .header__nav{
-    background-color: #323232;
+    background-color: $primary-color;
     height: 80px;
     display: flex;
     box-sizing: border-box;
@@ -26,10 +26,13 @@
     box-sizing: border-box;
     &--link1{
       @include div2;
-      border-bottom: 2px solid white;
+      font-family: $font-medium;
+      border-bottom: 2px solid $secondary-color;
+      color: $secondary-color;
     }
     &--link2{
       @include div2;
+      color: #e1e1e1;
     }
   }
   }
@@ -49,19 +52,57 @@
 
 .article{
     @include padding-mobile;
-    .subheader{
+    &__header{
         @include h1;
-        padding: 24px 0 32px;
+        padding: 32px 0 24px;
     }
     &__img{
-        width: 288px;
+        width: 100%;
         padding-bottom: 24px;
+        display: flex;
+        justify-content: center;
     }
     &__quote{
-        font-size: 16px;
-        line-height: 22px;
-        text-align: justify;
+        font-family: $font-demi;
     }
+    .quote{
+        line-height: 22px;
+        padding-bottom: 32px;
+    }
+    .musicians{
+      padding: 40px 0 24px;
+    }
+    &__para{
+      display: flex;
+      @include h4;
+      font-family: "Avenir-Light";
+    }
+    .para1{
+      padding-bottom: 24px;
+    }
+    .para2{
+      padding-bottom: 40px;
+    }
+}
+
+.section{
+  @include padding-mobile;
+  background-color: $secondary-color;
+    &__head{
+      padding: 32px 0 24px;
+    }
+    &__img{
+      width: 100%;
+      padding-bottom: 16px;
+    }
+}
+
+.footer{
+  @include padding-mobile;
+  background-color: $primary-color;
+  &__head{
+    @extend .hero__head;
+  }
 }
 
 

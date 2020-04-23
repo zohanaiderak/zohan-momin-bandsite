@@ -1,12 +1,32 @@
 @font-face {
-  font-family: 'Avenir';
-  src: url("../4.0-Assets/_Global-Font/AvenirNextProLT");
+  font-family: "Avenir-Bold";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Bold.ttf");
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Medium.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-demi";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Demi.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-Light";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Light.ttf");
 }
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Avenir';
+  font-family: "Avenir";
 }
 
 .header__nav {
@@ -45,19 +65,20 @@
 
 .header__nav .nav__div2--link1 {
   text-align: center;
-  color: #fafafa;
   text-decoration: none;
   padding-bottom: 15px;
   width: 50%;
-  border-bottom: 2px solid white;
+  font-family: "Avenir-Medium";
+  border-bottom: 2px solid #fafafa;
+  color: #fafafa;
 }
 
 .header__nav .nav__div2--link2 {
   text-align: center;
-  color: #fafafa;
   text-decoration: none;
   padding-bottom: 15px;
   width: 50%;
+  color: #e1e1e1;
 }
 
 .hero {
@@ -73,8 +94,9 @@
           align-items: center;
 }
 
-.hero__head {
+.hero__head, .footer__head {
   color: #fafafa;
+  font-family: "Avenir-Bold";
   font-size: 24px;
   line-height: 32px;
 }
@@ -83,20 +105,70 @@
   padding: 0 16px;
 }
 
-.article .subheader {
+.article__header {
+  font-family: "Avenir-Bold";
   font-size: 24px;
   line-height: 32px;
-  padding: 24px 0 32px;
+  padding: 32px 0 24px;
 }
 
 .article__img {
-  width: 288px;
+  width: 100%;
   padding-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .article__quote {
-  font-size: 16px;
+  font-family: "Avenir-demi";
+}
+
+.article .quote {
   line-height: 22px;
-  text-align: justify;
+  padding-bottom: 32px;
+}
+
+.article .musicians {
+  padding: 40px 0 24px;
+}
+
+.article__para {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Avenir-Light";
+}
+
+.article .para1 {
+  padding-bottom: 24px;
+}
+
+.article .para2 {
+  padding-bottom: 40px;
+}
+
+.section {
+  padding: 0 16px;
+  background-color: #fafafa;
+}
+
+.section__head {
+  padding: 32px 0 24px;
+}
+
+.section__img {
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.footer {
+  padding: 0 16px;
+  background-color: #323232;
 }
 /*# sourceMappingURL=main.css.map */

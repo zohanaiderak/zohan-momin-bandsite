@@ -23,7 +23,7 @@
 @mixin div2{
     text-align: center;
     text-decoration: none;
-    padding-bottom:15px;
+    padding-bottom:11px;
     width:50%;
     @include tablet{
         display: flex;

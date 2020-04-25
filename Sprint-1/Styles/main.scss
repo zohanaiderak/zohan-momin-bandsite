@@ -101,6 +101,7 @@
     &__para{
       display: flex;
       flex-direction: column;
+      color: #323232;
       @include h4-mobile;
       @include tablet{
         display: flex;
@@ -194,6 +195,27 @@
         }
       }
     }
+    .contact{
+      @include tablet{
+      display: flex;
+      justify-content: space-between;
+      }
+      &__mgmt:nth-of-type(odd){
+        @include footer-spacing;
+      }
+      &__mgmt{
+        @include tablet{
+          @include footer-spacing;
+        }
+        &--name{
+          font-family: $font-medium;
+        }
+        &--add{
+          @include h4-mobile;
+          padding-top: 15px ;
+        }
+      }
+    }
   .copyright{
     padding-bottom: 40px;
     @include h4-mobile; 
@@ -206,24 +228,3 @@
   }
 }
 
-.contact{
-  @include tablet{
-  display: flex;
-  justify-content: space-between;
-  }
-  &__mgmt:nth-of-type(odd){
-    @include footer-spacing;
-  }
-  &__mgmt{
-    @include tablet{
-      @include footer-spacing;
-    }
-    &--name{
-      font-family: $font-medium;
-    }
-    &--add{
-      @include h4-mobile;
-      padding-top: 15px ;
-    }
-  }
-}

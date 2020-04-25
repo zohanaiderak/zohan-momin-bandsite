@@ -282,6 +282,7 @@
   font-size: 13px;
   line-height: 18px;
   font-family: "Avenir-Light";
+  color: #323232;
 }
 
 @media (min-width: 768px) {
@@ -463,6 +464,7 @@
   font-size: 13px;
   line-height: 18px;
   font-family: "Avenir-Light";
+  color: #323232;
 }
 
 @media (min-width: 768px) {
@@ -512,6 +514,7 @@
   font-size: 13px;
   line-height: 18px;
   font-family: "Avenir-Light";
+  color: #323232;
   padding-top: 15px;
 }
 

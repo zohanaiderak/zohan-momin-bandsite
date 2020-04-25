@@ -124,7 +124,7 @@
 .section{
   background-color: $secondary-color;
     &__head{
-      @include h1-mobile
+      @include h1-mobile;
       @include mobile{
         padding: 24px 16px;
       }

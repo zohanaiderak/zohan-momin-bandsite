@@ -33,12 +33,12 @@
         height: 80px;
         padding:0;
         margin-left: 5rem;
-      }
+    }
     @include desktop{
         margin-left: 56px ;
         width: 80px;
     }
-  }
+}
 
 @mixin hero-height{
     height: 183px;
@@ -62,11 +62,11 @@
 
 @mixin article-img{
     height:145px; 
-        @include tablet{
+    @include tablet{
         height: 362px;
-        }  
-        @include desktop{
+    }  
+    @include desktop{
         height:450px ;
-        }
+    }
 }
 

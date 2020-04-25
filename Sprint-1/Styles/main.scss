@@ -5,41 +5,41 @@
 // desktop padding on left and right have been changed from 180px to 60px each through calculation
 
 *{
-    padding: 0;
-    margin: 0;  
-    font-family: "Avenir"; 
+  padding: 0;
+  margin: 0;  
+  font-family: "Avenir"; 
 }
   
-  .header__nav{
-    background-color: $primary-color;
-    height: 80px;
+.header__nav{
+  background-color: $primary-color;
+  height: 80px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  @include tablet{
     display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    @include tablet{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    .nav__div{
-    margin:auto;
-    padding: 0 16px;
-    @include mobile{
-      margin: 5px auto 16px;
-    }
-    @include tablet{
-      margin: 0;      //to zero out margin from mobile-site
-      padding-left: 24px;
-      padding-right: 0;  //to zero out right padding from mobile-site
-    }
-    @include desktop{
-      padding-left: 60px;
-    }
-    }
-    .nav__div2{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav__div{
+  margin:auto;
+  padding: 0 16px;
+  @include mobile{
+    margin: 5px auto 16px;
+  }
+  @include tablet{
+    margin: 0;      //to zero out margin from mobile-site
+    padding-left: 24px;
+    padding-right: 0;  //to zero out right padding from mobile-site
+  }
+  @include desktop{
+    padding-left: 60px;
+  }
+  }
+  .nav__div2{
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -77,22 +77,22 @@
     display: flex;
     flex-direction: column;
     &__header{
-        align-self: flex-start;
-        @include h1-mobile;
-        padding: 32px 0 24px;
-        @include desktop{
-          padding: 48px 0;
-        }
+      align-self: flex-start;
+      @include h1-mobile;
+      padding: 32px 0 24px;
+      @include desktop{
+        padding: 48px 0;
+      }
     }
     &__img{
       align-self: center;
-        width: 100%;
-        max-width: 896px;
-        margin-bottom: 24px;
-        @include article-img;
-        @include desktop{
-          margin-bottom: 48px ;
-        }
+      width: 100%;
+      max-width: 896px;
+      margin-bottom: 24px;
+      @include article-img;
+      @include desktop{
+        margin-bottom: 48px ;
+      }
     }
     &__quote{
         font-family: $font-demi;
@@ -114,7 +114,7 @@
       }
     }
     .name{
-    font-family: $font-demi;
+      font-family: $font-demi;
     }
     .musicians{
       padding: 40px 0 24px;
@@ -170,7 +170,7 @@
         padding: 32px 16px 24px;
       }
       @include tablet{
-      padding: 32px 0 24px 24px;
+        padding: 32px 0 24px 24px;
       }
       @include desktop{
         padding:48px 0 64px 60px;
@@ -179,33 +179,33 @@
     .img{
     align-self: center;
       @include mobile{
-      padding:0 16px;
+        padding:0 16px;
       }
       @include tablet{
-      padding:0 24px 24px;
-      display: flex;
-      justify-content: space-between;
+        padding:0 24px 24px;
+        display: flex;
+        justify-content: space-between;
       }
       @include desktop{
         padding:0 0 24px 0;
         width: 1080px;
       }
       &__styl{
-      width: 100%;
-      @include mobile{
-        display: flex;
-        padding-bottom: 16px;
-        height: 162px;
-      }
-      @include tablet{
-        width: 31.1111111%;
-        max-width: 344px;
-        height: 16.40625vw;
-        max-height: 193px;
-      }
-      @include desktop{
-        height: 193px;
-        width: 344px;
+        width: 100%;
+        @include mobile{
+          display: flex;
+          padding-bottom: 16px;
+          height: 162px;
+        }
+        @include tablet{
+          width: 31.1111111%;
+          max-width: 344px;
+          height: 16.40625vw;
+          max-height: 193px;
+        }
+        @include desktop{
+          height: 193px;
+          width: 344px;
       }
     }
     }
@@ -231,11 +231,11 @@
       }
       &__icon{
         @include tablet{
-        padding: 40px;
-        align-self: center;
+          padding: 40px;
+          align-self: center;
         } 
         &--img{
-        padding-right:32px;   
+          padding-right:32px;   
         }
       }
       &__site-name{
@@ -257,8 +257,8 @@
     }
     .contact{
       @include tablet{
-      display: flex;
-      justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
       }
       &__mgmt:nth-of-type(odd){
         @include footer-spacing;

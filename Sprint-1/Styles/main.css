@@ -73,7 +73,13 @@
 @media (min-width: 768px) {
   .header__nav .nav__div {
     margin: 0;
-    padding-left: 3.125%;
+    padding-left: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__nav .nav__div {
+    padding-left: 60px;
   }
 }
 
@@ -93,7 +99,6 @@
   text-decoration: none;
   padding-bottom: 15px;
   width: 50%;
-  font-family: "Avenir-Medium";
   border-bottom: 2px solid #fafafa;
   color: #fafafa;
 }
@@ -114,6 +119,13 @@
     height: 80px;
     padding: 0;
     margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__nav .nav__div2--link1 {
+    margin-left: 56px;
+    width: 80px;
   }
 }
 
@@ -144,18 +156,31 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .header__nav .nav__div2--link2 {
+    margin-left: 56px;
+    width: 80px;
+  }
+}
+
 .hero {
   background-image: url("../Assets/Images/austin-neill-1t0yY9lSpyE-unsplash.jpg");
-  height: 183px;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 183px;
 }
 
 @media (min-width: 768px) {
   .hero {
     height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    height: 670px;
   }
 }
 
@@ -169,16 +194,22 @@
   padding: 0 16px;
   background: rgba(50, 50, 50, 0.5);
   width: 100%;
-  height: 183px;
   color: #fafafa;
   font-family: "Avenir-Bold";
   font-size: 24px;
   line-height: 32px;
+  height: 183px;
 }
 
 @media (min-width: 768px) {
   .hero__head {
     padding: 0 3.125%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__head {
+    padding: 0 60px;
   }
 }
 
@@ -192,6 +223,12 @@
 @media (min-width: 768px) {
   .hero__head {
     height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__head {
+    height: 670px;
   }
 }
 
@@ -212,7 +249,15 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .article {
+    padding: 0 60px;
+  }
+}
+
 .article__header {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-family: "Avenir-Bold";
   font-size: 24px;
   line-height: 32px;
@@ -226,7 +271,16 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .article__header {
+    padding: 48px 0;
+  }
+}
+
 .article__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 100%;
   max-width: 896px;
   margin-bottom: 24px;
@@ -239,8 +293,26 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .article__img {
+    height: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article__img {
+    margin-bottom: 48px;
+  }
+}
+
 .article__quote {
   font-family: "Avenir-demi";
+}
+
+@media (min-width: 1200px) {
+  .article__quote {
+    padding: 0 92px;
+  }
 }
 
 .article .quote {
@@ -257,6 +329,16 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .article .quote {
+    padding-bottom: 40px;
+  }
+}
+
+.article .name {
+  font-family: "Avenir-demi";
+}
+
 .article .musicians {
   padding: 40px 0 24px;
   font-family: "Avenir-demi";
@@ -268,6 +350,12 @@
   .article .musicians {
     font-size: 24px;
     line-height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article .musicians {
+    padding: 56px 92px 32px;
   }
 }
 
@@ -304,6 +392,12 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .article__para {
+    padding: 0 92px 48px;
+  }
+}
+
 .article .para1 {
   padding-bottom: 24px;
 }
@@ -311,6 +405,13 @@
 @media (min-width: 768px) {
   .article .para1 {
     padding-right: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article .para1 {
+    padding: 0 20px 0 0;
+    width: 420px;
   }
 }
 
@@ -324,11 +425,33 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .article .para2 {
+    padding: 0 0 0 20px;
+    width: 420px;
+  }
+}
+
 .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #fafafa;
 }
 
+@media (min-width: 768px) {
+  .section {
+    padding-bottom: 16px;
+  }
+}
+
 .section__head {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-family: "Avenir-Bold";
   font-size: 24px;
   line-height: 32px;
@@ -353,6 +476,18 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .section__head {
+    padding: 48px 0 64px 60px;
+  }
+}
+
+.section .img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 @media (max-width: 767px) {
   .section .img {
     padding: 0 16px;
@@ -368,6 +503,13 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section .img {
+    padding: 0 0 24px 0;
+    width: 1080px;
   }
 }
 
@@ -394,6 +536,13 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .section .img__styl {
+    height: 193px;
+    width: 344px;
+  }
+}
+
 .ftr {
   padding: 0 16px;
   background-color: #323232;
@@ -406,11 +555,23 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .ftr {
+    padding: 0 60px;
+  }
+}
+
 @media (min-width: 768px) {
   .ftr .footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr .footer {
+    padding: 8px 0 16px;
   }
 }
 
@@ -439,8 +600,7 @@
 }
 
 .ftr .footer__icon--img {
-  height: 2rem;
-  padding-right: 2rem;
+  padding-right: 32px;
 }
 
 .ftr .footer__site-name {
@@ -459,6 +619,17 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .ftr .footer__site-name {
+    right: 60px;
+  }
+}
+
+.ftr .footer__site-name img {
+  height: 24px;
+  width: 120px;
+}
+
 @media (min-width: 768px) {
   .ftr .contact {
     display: -webkit-box;
@@ -474,9 +645,21 @@
   padding: 40px 0;
 }
 
+@media (min-width: 1200px) {
+  .ftr .contact__mgmt:nth-of-type(odd) {
+    padding: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .ftr .contact__mgmt {
     padding: 40px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr .contact__mgmt {
+    padding: 0;
   }
 }
 
@@ -488,7 +671,7 @@
   font-size: 13px;
   line-height: 18px;
   font-family: "Avenir-Light";
-  padding-top: 15px;
+  padding-top: 24px;
 }
 
 @media (min-width: 768px) {
@@ -520,6 +703,12 @@
   }
   .ftr .copyright br {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr .copyright {
+    padding-top: 40px;
   }
 }
 /*# sourceMappingURL=main.css.map */

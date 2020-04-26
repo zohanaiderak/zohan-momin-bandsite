@@ -23,7 +23,7 @@
 @mixin div2{
     text-align: center;
     text-decoration: none;
-    padding-bottom:11px;
+    padding-bottom: 13px;
     width:50%;
     @include tablet{
         display: flex;
@@ -67,6 +67,25 @@
     }  
     @include desktop{
         height:450px ;
+    }
+}
+
+@mixin section-center {
+    align-self: center;
+    width: 100%;
+    max-width: 896px;
+}
+
+@mixin hover{ 
+    &:hover{
+        transform: scale(1.25);
+        box-sizing: border-box;
+    }
+}
+
+@mixin greyscale{
+    &:hover{
+        filter: grayscale(100%);
     }
 }
 

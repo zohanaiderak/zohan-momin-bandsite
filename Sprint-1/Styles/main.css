@@ -70,6 +70,13 @@
   padding: 0 16px;
 }
 
+.header__nav .nav__div:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @media (max-width: 767px) {
   .header__nav .nav__div {
     margin: 5px auto 16px;
@@ -104,7 +111,7 @@
 .header__nav .nav__div2--link1 {
   text-align: center;
   text-decoration: none;
-  padding-bottom: 11px;
+  padding-bottom: 13px;
   width: 50%;
   border-bottom: 2px solid #fafafa;
   color: #fafafa;
@@ -139,9 +146,16 @@
 .header__nav .nav__div2--link2 {
   text-align: center;
   text-decoration: none;
-  padding-bottom: 11px;
+  padding-bottom: 13px;
   width: 50%;
   color: #e1e1e1;
+}
+
+.header__nav .nav__div2--link2:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -313,6 +327,11 @@
 }
 
 .article__quote {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  max-width: 896px;
   font-family: "Avenir-demi";
 }
 
@@ -374,6 +393,10 @@
 }
 
 .article__para {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  max-width: 896px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,6 +549,11 @@
   width: 100%;
 }
 
+.section .img__styl:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
 @media (max-width: 767px) {
   .section .img__styl {
     display: -webkit-box;
@@ -650,6 +678,17 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .ftr .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .ftr .contact__mgmt:nth-of-type(odd) {
   padding: 40px 0;
 }
@@ -668,7 +707,7 @@
 
 @media (min-width: 1200px) {
   .ftr .contact__mgmt {
-    padding: 0;
+    padding: 0 60px;
   }
 }
 
@@ -680,11 +719,26 @@
   font-size: 13px;
   line-height: 18px;
   font-family: "Avenir-Light";
-  padding-top: 24px;
+  padding: 24px 0;
 }
 
 @media (min-width: 768px) {
   .ftr .contact__mgmt--add {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.ftr .contact__mgmt--email {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Avenir-Light";
+  color: #fafafa;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .ftr .contact__mgmt--email {
     font-size: 14px;
     line-height: 22px;
   }

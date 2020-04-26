@@ -27,6 +27,7 @@
   .nav__div{
   margin:auto;
   padding: 0 16px;
+  @include hover;
   @include mobile{
     margin: 5px auto 16px;
   }
@@ -44,11 +45,12 @@
     justify-content: space-between;
     box-sizing: border-box;
     &--link1{
-      @include div2;
+      @include div2;   //hover not applied here as it is current page also applying it creates disruption in border-bottom and requires additional code
       border-bottom: 2px solid $secondary-color;
       color: $secondary-color;
     }
     &--link2{
+      @include hover;
       @include div2;
       color: #e1e1e1;
     }
@@ -85,9 +87,7 @@
       }
     }
     &__img{
-      align-self: center;
-      width: 100%;
-      max-width: 896px;
+      @include section-center;
       margin-bottom: 24px;
       @include article-img;
       @include desktop{
@@ -95,6 +95,7 @@
       }
     }
     &__quote{
+        @include section-center;
         font-family: $font-demi;
         br{
           display: none;
@@ -124,6 +125,7 @@
       }
     }
     &__para{
+      @include section-center;
       display: flex;
       flex-direction: column;
       color: #323232;
@@ -192,6 +194,7 @@
       }
       &__styl{
         width: 100%;
+        @include greyscale;
         @include mobile{
           display: flex;
           padding-bottom: 16px;
@@ -260,10 +263,14 @@
         display: flex;
         justify-content: space-between;
       }
+      @include desktop{
+        display: flex;
+        justify-content: flex-start;
+      }
       &__mgmt:nth-of-type(odd){
         @include footer-spacing;
         @include desktop{
-          padding: 0;   //to dissolve the padding
+          padding:0;   //to dissolve the padding
         }
       }
       &__mgmt{
@@ -271,14 +278,19 @@
           @include footer-spacing;
         }
         @include desktop{
-          padding: 0;   //to dissolve the padding
+          padding: 0 60px;   //to dissolve the padding
         }
         &--name{
           font-family: $font-medium;
         }
         &--add{
           @include h4-mobile;
-          padding-top: 24px;
+          padding:24px 0;
+        }
+        &--email{
+          @include h4-mobile;
+          color: $secondary-color;
+          text-decoration: none;
         }
       }
     }

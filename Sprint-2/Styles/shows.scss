@@ -1,0 +1,175 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_typography.scss';
+
+// desktop padding on left and right have been changed from 180px to 60px each through calculation
+
+*{
+  padding: 0;
+  margin: 0;  
+  font-family: "Avenir"; 
+}
+  
+.header__nav{
+  background-color: $primary-color;
+  height: 80px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav__div{
+  margin:auto;
+  padding: 0 16px;
+  @include hover;
+  @include mobile{
+    margin: 5px auto 16px;
+  }
+  @include tablet{
+    margin: 0;      //to zero out margin from mobile-site
+    padding-left: 24px;
+    padding-right: 0;  //to zero out right padding from mobile-site
+  }
+  @include desktop{
+    padding-left: 60px;
+  }
+  }
+  .nav__div2{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    &--link1{
+    @include div2;   //hover not applied here as it is current page also applying it creates disruption in border-bottom and requires additional code
+    @include hover;
+    color: #e1e1e1;
+    }
+    &--link2{
+      @include div2;
+      border-bottom: 2px solid $secondary-color;
+      color: $secondary-color;
+      
+    }
+  }
+}
+
+.hero{
+    background-image: url('../Assets/Images/david-lam-IU84ro7nmGw-unsplash.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include hero-height-shows;
+    
+    &__text{
+        height: 100%;
+        background: rgba($color: #323232, $alpha: 0.5);
+        color: $secondary-color;
+        @include padding;
+        &--h3{
+            @include quote;
+        }
+        &--head{
+        @include h1-hero;
+        }
+    }
+}
+
+
+.ftr{
+    @include padding;
+    background-color: $primary-color;
+    color: $secondary-color;
+    .footer{
+      @include tablet{
+        display:flex;
+      }
+      @include desktop{
+        padding: 8px 0 16px;   //8px and 16px to add padding to make the overall padding to meet requirements
+      }
+      &__head{
+          @include h1-mobile;
+          font-size: 36px;
+          @include footer-spacing;
+        }
+        &__icon{
+          @include tablet{
+            padding: 40px;
+            align-self: center;
+          } 
+          &--img{
+            padding-right:32px;   
+          }
+        }
+        &__site-name{
+          display: none;
+          @include tablet{
+            display: flex;
+            align-self: center;
+            position: absolute;
+            right: 24px;
+          }
+          @include desktop{
+            right: 60px;
+          }
+          img{
+            height: 24px;
+            width: 120px;
+          }
+        }
+      }
+      .contact{
+        @include tablet{
+          display: flex;
+          justify-content: space-between;
+        }
+        @include desktop{
+          display: flex;
+          justify-content: flex-start;
+        }
+        &__mgmt:nth-of-type(odd){
+          @include footer-spacing;
+          @include desktop{
+            padding:0;   //to dissolve the padding
+          }
+        }
+        &__mgmt{
+          @include tablet{
+            @include footer-spacing;
+          }
+          @include desktop{
+            padding: 0 60px;   //to dissolve the padding
+          }
+          &--name{
+            font-family: $font-medium;
+          }
+          &--add{
+            @include h4-mobile;
+            padding:24px 0;
+          }
+          &--email{
+            @include h4-mobile;
+            color: $secondary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    .copyright{
+      padding-bottom: 40px;
+      @include h4-mobile; 
+      @include tablet{
+        display: flex;
+        br{
+          display: none;
+        }
+      }
+      @include desktop{
+        padding-top: 40px ;
+      }
+    }
+  }

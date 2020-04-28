@@ -1,0 +1,777 @@
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Bold.ttf");
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Medium.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-demi";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Demi.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-Light";
+  src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf"), url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype - Avenir Next LT Pro Light.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir";
+}
+
+.header__nav {
+  background-color: #323232;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header__nav .nav__div {
+  margin: auto;
+  padding: 0 16px;
+}
+
+.header__nav .nav__div:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .header__nav .nav__div {
+    margin: 5px auto 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__nav .nav__div {
+    margin: 0;
+    padding-left: 24px;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__nav .nav__div {
+    padding-left: 60px;
+  }
+}
+
+.header__nav .nav__div2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header__nav .nav__div2--link1 {
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 13px;
+  width: 50%;
+  border-bottom: 2px solid #fafafa;
+  color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  .header__nav .nav__div2--link1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 80px;
+    padding: 0;
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__nav .nav__div2--link1 {
+    margin-left: 56px;
+    width: 80px;
+  }
+}
+
+.header__nav .nav__div2--link2 {
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 13px;
+  width: 50%;
+  color: #e1e1e1;
+}
+
+.header__nav .nav__div2--link2:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .header__nav .nav__div2--link2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 80px;
+    padding: 0;
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__nav .nav__div2--link2 {
+    margin-left: 56px;
+    width: 80px;
+  }
+}
+
+.hero {
+  background-image: url("../Assets/Images/austin-neill-1t0yY9lSpyE-unsplash.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 183px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    height: 670px;
+  }
+}
+
+.hero__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px;
+  background: rgba(50, 50, 50, 0.5);
+  width: 100%;
+  color: #fafafa;
+  font-family: "Avenir-Bold";
+  font-size: 24px;
+  line-height: 32px;
+  height: 183px;
+}
+
+@media (min-width: 768px) {
+  .hero__head {
+    padding: 0 3.125%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__head {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__head {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__head {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__head {
+    height: 670px;
+  }
+}
+
+.article {
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .article {
+    padding: 0 3.125%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article {
+    padding: 0 60px;
+  }
+}
+
+.article__header {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-family: "Avenir-Bold";
+  font-size: 24px;
+  line-height: 32px;
+  padding: 32px 0 24px;
+}
+
+@media (min-width: 768px) {
+  .article__header {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article__header {
+    padding: 48px 0;
+  }
+}
+
+.article__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  max-width: 896px;
+  margin-bottom: 24px;
+  height: 145px;
+}
+
+@media (min-width: 768px) {
+  .article__img {
+    height: 362px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article__img {
+    height: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article__img {
+    margin-bottom: 48px;
+  }
+}
+
+.article__quote {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  max-width: 896px;
+  font-family: "Avenir-demi";
+}
+
+.article__quote br {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .article__quote {
+    padding: 0 92px;
+  }
+  .article__quote br {
+    display: inline;
+  }
+}
+
+.article .quote {
+  padding-bottom: 32px;
+  font-family: "Avenir-demi";
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) {
+  .article .quote {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article .quote {
+    padding-bottom: 40px;
+  }
+}
+
+.article .name {
+  font-family: "Avenir-demi";
+}
+
+.article .musicians {
+  padding: 40px 0 24px;
+  font-family: "Avenir-demi";
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) {
+  .article .musicians {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article .musicians {
+    padding: 56px 92px 32px;
+  }
+}
+
+.article__para {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  max-width: 896px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #323232;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Avenir-Light";
+}
+
+@media (min-width: 768px) {
+  .article__para {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .article__para {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article__para {
+    padding: 0 92px 48px;
+  }
+}
+
+.article .para1 {
+  padding-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .article .para1 {
+    padding-right: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article .para1 {
+    padding: 0 20px 0 0;
+    width: 420px;
+  }
+}
+
+.article .para2 {
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .article .para2 {
+    padding-left: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article .para2 {
+    padding: 0 0 0 20px;
+    width: 420px;
+  }
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fafafa;
+  padding-bottom: 16px;
+}
+
+.section__head {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-family: "Avenir-Bold";
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@media (min-width: 768px) {
+  .section__head {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section__head {
+    padding: 32px 16px 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section__head {
+    padding: 32px 0 24px 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section__head {
+    padding: 48px 0 64px 60px;
+  }
+}
+
+.section .img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 767px) {
+  .section .img {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section .img {
+    padding: 0 24px 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section .img {
+    padding: 0 0 24px 0;
+    width: 1080px;
+  }
+}
+
+.section .img__styl {
+  width: 100%;
+}
+
+.section .img__styl:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+@media (max-width: 767px) {
+  .section .img__styl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 16px;
+    height: 162px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section .img__styl {
+    width: 31.1111111%;
+    max-width: 344px;
+    height: 16.40625vw;
+    max-height: 193px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section .img__styl {
+    height: 193px;
+    width: 344px;
+  }
+}
+
+.ftr {
+  padding: 0 16px;
+  background-color: #323232;
+  color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  .ftr {
+    padding: 0 3.125%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ftr .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr .footer {
+    padding: 8px 0 16px;
+  }
+}
+
+.ftr .footer__head {
+  font-family: "Avenir-Bold";
+  font-size: 24px;
+  line-height: 32px;
+  font-size: 36px;
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .ftr .footer__head {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ftr .footer__icon {
+    padding: 40px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.ftr .footer__icon--img {
+  padding-right: 32px;
+}
+
+.ftr .footer__site-name {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .ftr .footer__site-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    position: absolute;
+    right: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr .footer__site-name {
+    right: 60px;
+  }
+}
+
+.ftr .footer__site-name img {
+  height: 24px;
+  width: 120px;
+}
+
+@media (min-width: 768px) {
+  .ftr .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.ftr .contact__mgmt:nth-of-type(odd) {
+  padding: 40px 0;
+}
+
+@media (min-width: 1200px) {
+  .ftr .contact__mgmt:nth-of-type(odd) {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .ftr .contact__mgmt {
+    padding: 40px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr .contact__mgmt {
+    padding: 0 60px;
+  }
+}
+
+.ftr .contact__mgmt--name {
+  font-family: "Avenir-Medium";
+}
+
+.ftr .contact__mgmt--add {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Avenir-Light";
+  padding: 24px 0;
+}
+
+@media (min-width: 768px) {
+  .ftr .contact__mgmt--add {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.ftr .contact__mgmt--email {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Avenir-Light";
+  color: #fafafa;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .ftr .contact__mgmt--email {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.ftr .copyright {
+  padding-bottom: 40px;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Avenir-Light";
+}
+
+@media (min-width: 768px) {
+  .ftr .copyright {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ftr .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ftr .copyright br {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ftr .copyright {
+    padding-top: 40px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

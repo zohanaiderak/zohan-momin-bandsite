@@ -96,3 +96,9 @@
     }
 }
 
+@mixin form-title {
+    color: #afafaf;
+    font-weight: bold;
+    @include h4-mobile;
+}
+

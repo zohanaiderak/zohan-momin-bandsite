@@ -605,8 +605,8 @@
 
 .comments__face {
   margin-top: 15px;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
 }
 
@@ -652,6 +652,39 @@
   padding: 10px 10px;
   border-radius: 5px;
   margin-bottom: 32px;
+}
+
+.post {
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .post {
+    padding: 0 3.125%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .post {
+    padding: 0 60px;
+  }
+}
+
+.post__name {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.post__comment {
+  list-style: none;
+}
+
+.timestamp {
+  position: absolute;
+  right: 16px;
+  justify-self: flex-end;
 }
 
 .ftr {

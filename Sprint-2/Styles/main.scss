@@ -221,8 +221,8 @@
   margin-top: 16px;    //to make the top  margin 40px
   &__face{
     margin-top: 15px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
   }
   &__form{
@@ -254,7 +254,23 @@
   }
 }
 
-
+.post{
+  @include padding;
+  
+  &__name{
+    list-style: none;
+    display: inline-flex;
+  }
+  &__comment{
+    list-style: none;
+  }
+  
+}
+.timestamp{
+  position: absolute;
+  right: 16px;
+  justify-self: flex-end;
+}
 
 .ftr{
   @include padding;

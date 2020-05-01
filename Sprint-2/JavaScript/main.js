@@ -1,6 +1,6 @@
 let comments = [
     {
-        'name': "michael lyons",
+        'name': "Michael Lyons",
         'timestamp':"04/30/2020",
         'comment':"They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
     },
@@ -35,4 +35,51 @@ displayComment(comments[2].name);
 displayComment(comments[2].timestamp);
 displayComment(comments[2].comment);
 
+
+
+
+let btn = document.querySelector('.comments__form--submit');
+btn.addEventListener('click', e =>{
+    e.preventDefault();
+    let text = document.getElementById('name');
+    let newcomment={};
+    let item = comments.unshift(newcomment);
+    newcomment.name = text.value;
+    comments.push(newcomment);
     
+    // document.querySelector('.post').prepend(item);
+});
+
+console.log(comments.length);
+    
+
+// let btn = document.querySelector('.comments__form--submit');
+
+// btn.addEventListener('click', e =>{
+//     e.preventDefault();
+//     let comm = document.getElementById('textArea');
+//     let item = document.createElement("LI");
+//     item.innerHTML=comm.value;
+//     document.querySelector('.post').prepend(item);    
+// });
+// btn.addEventListener('click', e =>{
+//     e.preventDefault();
+//     let text = document.getElementById('name');
+//     let item = document.createElement("LI");
+//     item.innerHTML =text.value;
+//     document.querySelector('.post').prepend(item);    
+// });
+
+let ulComm = document.querySelector(".post");
+let allLi = ulComm.querySelectorAll("li");
+let l= allLi.length;
+for (var i =0 ; i < l-1 ; i=i+3){
+    allLi[i].classList.add('post__name');
+}
+for (var i =l-1 ; i >= 0; i=i-3){
+    allLi[i].classList.add('post__comment');
+}
+for (var i =l-2 ; i >= 0; i=i-3){
+    allLi[i].classList.add('post__name');
+    allLi[i].classList.add('timestamp');
+}

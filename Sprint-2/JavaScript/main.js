@@ -1,85 +1,130 @@
+var currentdate = new Date(); 
+var datetime =  currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear();
+
 let comments = [
     {
-        'name': "Michael Lyons",
-        'timestamp':"04/30/2020",
-        'comment':"They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
+        'name': "Theodore Duncan",
+        'timestamp': datetime,
+        'comment':"How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
     },
     {
         'name': "Gary Wong",
-        'timestamp':"04/30/2020",
+        'timestamp': datetime,
         'comment':"Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!"
     },
     {
-        'name': "Theodore Duncan",
-        'timestamp':"04/30/2020",
-        'comment':"How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
+        'name': "Michael Lyons",
+        'timestamp': datetime,
+        'comment':"They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
     }
-]
+];
 
-let ul = document.createElement("ul");
-ul.setAttribute("class" , "post");
-document.getElementById('section').appendChild(ul); 
-function displayComment(object1){
-    let li = document.createElement('li');
-    ul.appendChild(li);
-    li.innerHTML = li.innerHTML + object1;
-    }
-
-displayComment(comments[0].name)
-displayComment(comments[0].timestamp);
-displayComment(comments[0].comment);
-displayComment(comments[1].name);
-displayComment(comments[1].timestamp);
-displayComment(comments[1].comment);
-displayComment(comments[2].name);
-displayComment(comments[2].timestamp);
-displayComment(comments[2].comment);
-
-
-
+let divUl = document.createElement("div");
+divUl.setAttribute('id', 'div__form');
+divUl.setAttribute('class', 'div__form');
+document.getElementById('section').appendChild(divUl);
 
 let btn = document.querySelector('.comments__form--submit');
 btn.addEventListener('click', e =>{
     e.preventDefault();
-    let text = document.getElementById('name');
+    document.getElementById('div__form').innerHTML = "";
     let newcomment={};
-    let item = comments.unshift(newcomment);
+    let text = document.getElementById('name');
+    let textArea = document.getElementById('textArea');
     newcomment.name = text.value;
+    newcomment.timestamp = datetime;
+    newcomment.comment = textArea.value;
     comments.push(newcomment);
+    function displayComment(name , timestamp, comment){
+        let ul = document.createElement("ul");
+        ul.setAttribute('class', "post");
+        divUl.prepend(ul);
+        let li = document.createElement('li');
+        let pName = document.createElement('p');
+        let pTime = document.createElement('p');
+        let pComm = document.createElement('p');
+        ul.appendChild(li);
+        li.appendChild(pName);
+        pName.innerHTML = pName.innerHTML + name;
+        li.appendChild(pTime);
+        pTime.innerHTML = pTime.innerHTML + timestamp;
+        li.appendChild(pTime);
+        pComm.innerHTML = pComm.innerHTML + comment;
+        li.appendChild(pComm);
+        li.innerHTML = li.innerHTML ;
+        let ulComm = document.querySelector(".post");
+        let allLi = ulComm.querySelectorAll("li");
+        let l= allLi.length;
+        let clrinput = document.querySelector(".comments");
+        clrinput.reset();
+        for (var i =0 ; i < l; i++){
+            allLi[i].classList.add('post__comment');
+        }
     
-    // document.querySelector('.post').prepend(item);
-});
-
-console.log(comments.length);
+    }
     
+    for(var i = 0;i<comments.length;i++){
+        displayComment(comments[i].name ,comments[i].timestamp ,comments[i].comment );
+    } 
+    for(var i=0 ; i<comments.length ; i++ ){
+        let ulsel = document.querySelectorAll('.post');
+        let faceimg = document.createElement('img');
+        faceimg.setAttribute('class', 'comment__dp');
+        divUl.prepend(faceimg);
+        ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
+        }
+    }
+);
+    
+function displayComment(name , timestamp, comment){
+    let ul = document.createElement("ul");
+    ul.setAttribute('class', "post");
+    divUl.prepend(ul);
+    let li = document.createElement('li');
+    let pName = document.createElement('p');
+    let pTime = document.createElement('p');
+    let pComm = document.createElement('p');
+    ul.appendChild(li);
+    li.appendChild(pName);
+    pName.innerHTML = pName.innerHTML + name;
+    li.appendChild(pTime);
+    pTime.innerHTML = pTime.innerHTML + timestamp;
+    li.appendChild(pTime);
+    pComm.innerHTML = pComm.innerHTML + comment;
+    li.appendChild(pComm);
+    li.innerHTML = li.innerHTML ;
+    let ulComm = document.querySelector(".post");
+    let allLi = ulComm.querySelectorAll("li");
+    let l= allLi.length;
+    for (var i =0 ; i < l; i++){
+        allLi[i].classList.add('post__comment');
+    }
+}
 
-// let btn = document.querySelector('.comments__form--submit');
+for(var i = 0;i<comments.length;i++){
+    displayComment(comments[i].name ,comments[i].timestamp ,comments[i].comment );
+}
 
-// btn.addEventListener('click', e =>{
-//     e.preventDefault();
-//     let comm = document.getElementById('textArea');
-//     let item = document.createElement("LI");
-//     item.innerHTML=comm.value;
-//     document.querySelector('.post').prepend(item);    
-// });
-// btn.addEventListener('click', e =>{
-//     e.preventDefault();
-//     let text = document.getElementById('name');
-//     let item = document.createElement("LI");
-//     item.innerHTML =text.value;
-//     document.querySelector('.post').prepend(item);    
-// });
+for(var i=0 ; i<comments.length ; i++ ){
+    let ulsel = document.querySelectorAll('.post');
+    let faceimg = document.createElement('img');
+    faceimg.setAttribute('class', 'comment__dp');
+    divUl.prepend(faceimg);
+    ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
+}
 
-let ulComm = document.querySelector(".post");
-let allLi = ulComm.querySelectorAll("li");
-let l= allLi.length;
+let divf = document.querySelector('.div__form')
+let allp = divf.querySelectorAll("p");
+let l= allp.length;
 for (var i =0 ; i < l-1 ; i=i+3){
-    allLi[i].classList.add('post__name');
+    allp[i].classList.add('post__comment--name');
 }
 for (var i =l-1 ; i >= 0; i=i-3){
-    allLi[i].classList.add('post__comment');
+    allp[i].classList.add('post__comment--text');
 }
 for (var i =l-2 ; i >= 0; i=i-3){
-    allLi[i].classList.add('post__name');
-    allLi[i].classList.add('timestamp');
+    allp[i].classList.add('post__comment--name');
+    allp[i].classList.add('timestamp');
 }

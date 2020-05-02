@@ -214,15 +214,24 @@
     }
 }
 
+.section2{
+  padding-bottom: 40px;
+  width: 320px;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
 .comments{
   @include padding;
   display: flex;
   justify-content: space-between;
   margin-top: 16px;    //to make the top  margin 40px
+  padding-bottom: 32px;
   &__face{
     margin-top: 15px;
-    width: 48px;
-    height: 48px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
   }
   &__form{
@@ -230,7 +239,7 @@
     &--input{
       width: 224px;
       padding: 10px 10px;
-      border: 2px solid #afafaf;
+      border: 2px solid $form-color;
       border-radius: 5px;
       box-sizing: border-box;
       margin-bottom: 10px;
@@ -249,27 +258,59 @@
       width: 224px;
       padding: 10px 10px;
       border-radius: 5px;
-      margin-bottom: 32px;
     }
   }
 }
 
-.post{
-  @include padding;
-  
-  &__name{
-    list-style: none;
-    display: inline-flex;
-  }
-  &__comment{
-    list-style: none;
-  }
-  
+.div__form{
+  margin: 0 16px;
+  border-top: 1px solid $form-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 288px;
+  // flex-direction: column;
 }
+
+.comment__dp{
+  border: 1px solid $form-color;
+  background-color: $form-color;
+  @extend .comments__face;
+  display: flex;
+  margin-top: 24px;
+}
+
+
+
+
+.post{
+  @include h4-mobile;
+  border-bottom: 1px solid $form-color;
+  
+  &__comment{
+    width: 240px;
+    list-style: none;
+    padding:24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    &--name{
+      list-style: none;
+      display: inline-flex;
+      font-weight: bold;
+    &--text{
+      padding-top: 16px;
+    }
+  }
+  
+} 
+}
+
 .timestamp{
-  position: absolute;
-  right: 16px;
-  justify-self: flex-end;
+  display: flex;
+  justify-self: end;
+  font-weight: normal;
+  color: $form-color;
+  padding-left: 5px;
 }
 
 .ftr{

@@ -53,30 +53,40 @@
       @include div2;
       border-bottom: 2px solid $secondary-color;
       color: $secondary-color;
-      
+      @include desktop{
+        justify-content: center;
+      } 
     }
   }
 }
 
+.hero-img{
+  background-image: url('../Assets/Images/david-lam-IU84ro7nmGw-unsplash.jpg');
+  background-size: cover;
+  @include hero-height-shows;
+}
 .hero{
-    background-image: url('../Assets/Images/david-lam-IU84ro7nmGw-unsplash.jpg');
-    background-size: cover;
+    background: rgba($color: #323232, $alpha: 0.5);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    @include hero-height-shows;
-    
+    @include padding;
     &__text{
-        height: 100%;
-        background: rgba($color: #323232, $alpha: 0.5);
+        padding-top: 64px;
         color: $secondary-color;
-        @include padding;
         &--h3{
             @include quote;
+            padding-bottom: 15px;
         }
         &--head{
         @include h1-hero;
         }
+    }
+    &__song{
+      padding-top: 64px;
+      &--iframe{
+       height : 146px;
+       width: 100%;
+      }
     }
 }
 

@@ -184,9 +184,28 @@
   }
 }
 
-.hero {
+@media (min-width: 1200px) {
+  .header__nav .nav__div2--link2 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.hero-img {
   background-image: url("../Assets/Images/david-lam-IU84ro7nmGw-unsplash.jpg");
   background-size: cover;
+  height: 472px;
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    height: 670px;
+  }
+}
+
+.hero {
+  background: rgba(50, 50, 50, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,41 +213,31 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 472px;
-}
-
-@media (min-width: 768px) {
-  .hero {
-    height: 670px;
-  }
-}
-
-.hero__text {
-  height: 100%;
-  background: rgba(50, 50, 50, 0.5);
-  color: #fafafa;
   padding: 0 16px;
 }
 
 @media (min-width: 768px) {
-  .hero__text {
+  .hero {
     padding: 0 3.125%;
   }
 }
 
 @media (min-width: 1200px) {
-  .hero__text {
+  .hero {
     padding: 0 60px;
   }
+}
+
+.hero__text {
+  padding-top: 64px;
+  color: #fafafa;
 }
 
 .hero__text--h3 {
   font-family: "Avenir-demi";
   font-size: 16px;
   line-height: 22px;
+  padding-bottom: 15px;
 }
 
 @media (min-width: 768px) {
@@ -249,6 +258,15 @@
     font-size: 60px;
     line-height: 68px;
   }
+}
+
+.hero__song {
+  padding-top: 64px;
+}
+
+.hero__song--iframe {
+  height: 146px;
+  width: 100%;
 }
 
 .ftr {

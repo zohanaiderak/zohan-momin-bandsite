@@ -291,26 +291,22 @@
     width: 240px;
     list-style: none;
     padding:24px 0;
-    display: flex;
-    flex-wrap: wrap;
     &--name{
       list-style: none;
       display: inline-flex;
       font-weight: bold;
+    }
     &--text{
       padding-top: 16px;
-    }
-  }
-  
-} 
+      display: block;  
+    }  
+  } 
 }
 
 .timestamp{
-  display: flex;
-  justify-self: end;
   font-weight: normal;
   color: $form-color;
-  padding-left: 5px;
+  padding-left: 15px;
 }
 
 .ftr{

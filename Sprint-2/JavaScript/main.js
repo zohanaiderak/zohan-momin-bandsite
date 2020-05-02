@@ -62,7 +62,19 @@ btn.addEventListener('click', e =>{
         for (var i =0 ; i < l; i++){
             allLi[i].classList.add('post__comment');
         }
-    
+        let divf = document.querySelector('.div__form')
+        let allp = divf.querySelectorAll("p");
+        let le= allp.length;
+        for (var i =0 ; i < le-1 ; i=i+3){
+            allp[i].classList.add('post__comment--name');
+        }
+        for (var i =le-1 ; i >= 0; i=i-3){
+            allp[i].classList.add('post__comment--text');
+        }
+        for (var i =le-2 ; i >= 0; i=i-3){
+            allp[i].classList.add('post__comment--name');
+            allp[i].classList.add('timestamp');
+        }
     }
     
     for(var i = 0;i<comments.length;i++){
@@ -101,6 +113,19 @@ function displayComment(name , timestamp, comment){
     for (var i =0 ; i < l; i++){
         allLi[i].classList.add('post__comment');
     }
+    let divf = document.querySelector('.div__form')
+    let allp = divf.querySelectorAll("p");
+    let le= allp.length;
+    for (var i =0 ; i < le-1 ; i=i+3){
+        allp[i].classList.add('post__comment--name');
+    }
+    for (var i =le-1 ; i >= 0; i=i-3){
+        allp[i].classList.add('post__comment--text');
+    }
+    for (var i =le-2 ; i >= 0; i=i-3){
+        allp[i].classList.add('post__comment--name');
+        allp[i].classList.add('timestamp');
+    }
 }
 
 for(var i = 0;i<comments.length;i++){
@@ -115,16 +140,16 @@ for(var i=0 ; i<comments.length ; i++ ){
     ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
 }
 
-let divf = document.querySelector('.div__form')
-let allp = divf.querySelectorAll("p");
-let l= allp.length;
-for (var i =0 ; i < l-1 ; i=i+3){
-    allp[i].classList.add('post__comment--name');
-}
-for (var i =l-1 ; i >= 0; i=i-3){
-    allp[i].classList.add('post__comment--text');
-}
-for (var i =l-2 ; i >= 0; i=i-3){
-    allp[i].classList.add('post__comment--name');
-    allp[i].classList.add('timestamp');
-}
+// let divf = document.querySelector('.div__form')
+// let allp = divf.querySelectorAll("p");
+// let l= allp.length;
+// for (var i =0 ; i < l-1 ; i=i+3){
+//     allp[i].classList.add('post__comment--name');
+// }
+// for (var i =l-1 ; i >= 0; i=i-3){
+//     allp[i].classList.add('post__comment--text');
+// }
+// for (var i =l-2 ; i >= 0; i=i-3){
+//     allp[i].classList.add('post__comment--name');
+//     allp[i].classList.add('timestamp');
+// }

@@ -82,10 +82,14 @@ btn.addEventListener('click', e =>{
     } 
     for(var i=0 ; i<comments.length ; i++ ){
         let ulsel = document.querySelectorAll('.post');
+        let secli = document.createElement('li');
+        secli.setAttribute('class', 'post__dp')
         let faceimg = document.createElement('img');
-        faceimg.setAttribute('class', 'comment__dp');
-        divUl.prepend(faceimg);
-        ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
+        faceimg.setAttribute('class', 'post__dp-grey');
+        secli.appendChild(faceimg);
+        ulsel[i].prepend(secli);
+        // divUl.prepend(faceimg);
+        // ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
         }
     }
 );
@@ -134,10 +138,14 @@ for(var i = 0;i<comments.length;i++){
 
 for(var i=0 ; i<comments.length ; i++ ){
     let ulsel = document.querySelectorAll('.post');
+    let secli = document.createElement('li');
+    secli.setAttribute('class', 'post__dp')
     let faceimg = document.createElement('img');
-    faceimg.setAttribute('class', 'comment__dp');
-    divUl.prepend(faceimg);
-    ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
+    faceimg.setAttribute('class', 'post__dp-grey');
+    secli.appendChild(faceimg);
+    ulsel[i].prepend(secli); 
+    // divUl.prepend(faceimg);
+    // ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
 }
 
 // let divf = document.querySelector('.div__form')

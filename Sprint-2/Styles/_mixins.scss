@@ -100,5 +100,8 @@
     color: #afafaf;
     font-weight: bold;
     @include h4-mobile;
+    @include tablet{
+        padding-bottom: 8px;
+    }
 }
 

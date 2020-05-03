@@ -200,6 +200,9 @@
   @include tablet{
     padding:0;
   }
+  &--date{
+    font-family: $font-demi;
+  }
 }
 
 .shows-button{

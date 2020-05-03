@@ -482,6 +482,10 @@
   }
 }
 
+.row-child--date {
+  font-family: "Avenir-demi";
+}
+
 .shows-button, .btn-hidden {
   color: #fafafa;
   margin-top: 8px;

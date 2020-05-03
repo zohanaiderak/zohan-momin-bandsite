@@ -114,49 +114,38 @@ for(var i=0 ; i<showTime.length ; i++ ){
     divparent[i].appendChild(divbtn);
 }
 
-// for(var i=1;i<showTime.length;i++){
-//     let sechd = document.querySelectorAll(".row");
-//     let rowhd = sechd[i].querySelector('.row-head');
-//     rowhd.setAttribute('class', 'row-head2');
-// }
-// for(var i=1;i<showTime.length;i++){
-//     let sechd = document.querySelectorAll(".row div:nth-child(2)");
-//     let rowhd = sechd[i].querySelector('.row-head');
-//     rowhd.setAttribute('class', 'row-head2');
-// }
-// for(var i=1;i<showTime.length;i++){
-//     let sechd = document.querySelectorAll(".row div:nth-child(3)");
-//     let rowhd = sechd[i].querySelector('.row-head');
-//     rowhd.setAttribute('class', 'row-head2');
-// }
+for(var i=0;i<showTime.length;i++){
+    let sechd = document.querySelectorAll(".row");
+    let rowhd = sechd[i].querySelector('.row-child');
+    rowhd.classList.add('row-child--date');
+}
 
-
-    let mainhd = document.createElement('div');
-    mainhd.setAttribute('class', 'row');
-    mainhd.classList.add('row__headShow');
-    let colhd = document.createElement('div');
-    colhd.setAttribute('class', 'row__column');
-    colhd.classList.add('col-height');
-    let hd1 = document.createElement('p');
-    hd1.setAttribute('class' , 'row__column--styling');
-    hd1.classList.add('row__head');
-    hd1.innerHTML = "DATE";
-    colhd.appendChild(hd1);
-    let hd2 = document.createElement('p');
-    hd2.setAttribute('class' , 'row__column--styling2');
-    hd2.classList.add('row__head');
-    hd2.innerHTML = "VENUE";
-    colhd.appendChild(hd2);
-    let hd3 = document.createElement('p');
-    hd3.setAttribute('class' , 'row__column--styling3');
-    hd3.classList.add('row__head');
-    hd3.innerHTML = "LOCATION";
-    colhd.appendChild(hd3);
-    let hd4 = document.createElement('button');
-    hd4.setAttribute('class' , 'btn-hidden');
-    mainhd.classList.add('row__headShow');
-    hd4.innerHTML = "         ";
-    colhd.appendChild(hd4);
-    let maindv = document.querySelector('.mainDiv');
-    mainhd.appendChild(colhd);
-    maindv.prepend(mainhd);
+let mainhd = document.createElement('div');
+mainhd.setAttribute('class', 'row');
+mainhd.classList.add('row__headShow');
+let colhd = document.createElement('div');
+colhd.setAttribute('class', 'row__column');
+colhd.classList.add('col-height');
+let hd1 = document.createElement('p');
+hd1.setAttribute('class' , 'row__column--styling');
+hd1.classList.add('row__head');
+hd1.innerHTML = "DATE";
+colhd.appendChild(hd1);
+let hd2 = document.createElement('p');
+hd2.setAttribute('class' , 'row__column--styling2');
+hd2.classList.add('row__head');
+hd2.innerHTML = "VENUE";
+colhd.appendChild(hd2);
+let hd3 = document.createElement('p');
+hd3.setAttribute('class' , 'row__column--styling3');
+hd3.classList.add('row__head');
+hd3.innerHTML = "LOCATION";
+colhd.appendChild(hd3);
+let hd4 = document.createElement('button');
+hd4.setAttribute('class' , 'btn-hidden');
+mainhd.classList.add('row__headShow');
+hd4.innerHTML = "         ";
+colhd.appendChild(hd4);
+let maindv = document.querySelector('.mainDiv');
+mainhd.appendChild(colhd);
+maindv.prepend(mainhd);

@@ -41,7 +41,7 @@
 }
 
 @mixin hero-height{
-    height: 183px;
+    height: 57.1875vw;
     @include tablet{
       height: 400px;
     }
@@ -68,7 +68,7 @@
 }
 
 @mixin article-img{
-    height:145px; 
+    height: 45.3125vw; 
     @include tablet{
         height: 362px;
     }  

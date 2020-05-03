@@ -2,7 +2,7 @@ var currentdate = new Date();
 var datetime =  currentdate.getDate() + "/"
                 + (currentdate.getMonth()+1)  + "/" 
                 + currentdate.getFullYear();
-
+//+1 is added as month is an array starting january as 0.
 let comments = [
     {
         'name': "Theodore Duncan",
@@ -88,8 +88,6 @@ btn.addEventListener('click', e =>{
         faceimg.setAttribute('class', 'post__dp-grey');
         secli.appendChild(faceimg);
         ulsel[i].prepend(secli);
-        // divUl.prepend(faceimg);
-        // ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
         }
     }
 );
@@ -144,20 +142,4 @@ for(var i=0 ; i<comments.length ; i++ ){
     faceimg.setAttribute('class', 'post__dp-grey');
     secli.appendChild(faceimg);
     ulsel[i].prepend(secli); 
-    // divUl.prepend(faceimg);
-    // ulsel[i].parentNode.insertBefore(faceimg , ulsel[i]);
 }
-
-// let divf = document.querySelector('.div__form')
-// let allp = divf.querySelectorAll("p");
-// let l= allp.length;
-// for (var i =0 ; i < l-1 ; i=i+3){
-//     allp[i].classList.add('post__comment--name');
-// }
-// for (var i =l-1 ; i >= 0; i=i-3){
-//     allp[i].classList.add('post__comment--text');
-// }
-// for (var i =l-2 ; i >= 0; i=i-3){
-//     allp[i].classList.add('post__comment--name');
-//     allp[i].classList.add('timestamp');
-// }

@@ -130,7 +130,7 @@ for(var i=0 ; i<showTime.length ; i++ ){
 //     rowhd.setAttribute('class', 'row-head2');
 // }
 
-if (window.innerWidth > 767){
+
     let mainhd = document.createElement('div');
     mainhd.setAttribute('class', 'row');
     mainhd.classList.add('row__headShow');
@@ -160,4 +160,3 @@ if (window.innerWidth > 767){
     let maindv = document.querySelector('.mainDiv');
     mainhd.appendChild(colhd);
     maindv.prepend(mainhd);
-}

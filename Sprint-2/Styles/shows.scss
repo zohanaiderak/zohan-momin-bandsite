@@ -53,9 +53,10 @@
       @include div2;
       border-bottom: 2px solid $secondary-color;
       color: $secondary-color;
-      @include desktop{
+      @include tablet{
+        width: 80px;
         justify-content: center;
-      } 
+      }
     }
   }
 }
@@ -70,9 +71,7 @@
     display: flex;
     flex-direction: column;
     @include padding;
-    @include tablet{
-      height: 670px ;
-    }
+    @include hero-height-shows;
     @include desktop{
       display: flex;
       flex-direction: row;
@@ -82,15 +81,15 @@
         color: $secondary-color;
         @include tablet{
           padding-top: 96px;
+          width: 80%;
         }
         @include desktop{
           padding-top: 160px;
-          width: 50%;
+          width: 55%;
         }
         &--h3{
             @include quote;
-            padding-bottom: 15px;
-            @include desktop{
+            @include tablet{
             padding-bottom: 48px;
             }
         }
@@ -102,11 +101,12 @@
       padding-top: 64px;
       @include desktop{
         width: 50%;
-        height: 512px;
+        height: 425px;
         box-sizing: border-box;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+        vertical-align: baseline;
       }
       &--iframe{
        height : 146px;
@@ -121,9 +121,7 @@
 
 .shows{
   @include padding;
-  @include tablet{
     margin-bottom: 40px;
-  }
   @include desktop{
     display: flex;
     justify-content: space-between;
@@ -136,6 +134,7 @@
 
 .mainDiv{
   @include desktop{
+    margin-top: 32px;
       width: 804px;
   }
 }
@@ -144,17 +143,21 @@
   padding: 20px 0 16px;
   border-bottom: 1px solid #e1e1e1 ;  //#004892 isn't mercury
   &__column{
+    @include tablet{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    }
     &--styling , &--styling2 , &--styling3{
+     @include tablet{
       display: flex;
       flex-direction: column;
       justify-content: center;
       flex-basis: 100%;
       flex: 1;
+     }
     }
   }
 }
@@ -168,18 +171,28 @@
 }
 
 .row__headShow{
+    display: none;
+    @include tablet{
+      display: inline;
     border: none;
     padding-bottom: 0;
+    }
 }
 
 .row__head{
+  display: none;
+  @include tablet{
+  display: flex;
   color: $form-color;
   justify-content: flex-end; 
   height: 16px;
+  }
 }
 
 .col-height{
+  @include tablet{
   height: 16px;
+  }
 }
 
 .row-child{
@@ -189,8 +202,9 @@
   }
 }
 
-.shows-button ,.btn-hidden {
+.shows-button{
   color: $secondary-color ;
+  margin-top: 8px; //to make vertical spacing 32px
   outline: none;
   background-color: $primary-color;
   width: 288px;
@@ -199,6 +213,7 @@
   border-radius: 4px;
   @include tablet{
     width: 160px;
+    margin-top: 0;
   }
       &:hover{
         background-color: black;
@@ -212,8 +227,12 @@
 }
 
 .btn-hidden{
+  display: none;
   @extend .shows-button;
+  @include tablet{
+  display: inline;
   visibility: hidden;
+  }
 }
 
 

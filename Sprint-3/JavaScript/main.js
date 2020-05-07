@@ -1,33 +1,30 @@
 var currentdate = new Date(); 
 var datetime = (currentdate.getMonth()+1)+"/"+currentdate.getDate()+"/"+currentdate.getFullYear();
 
+let commentsAPIKey = "7395cb0b-0998-4427-adcc-f980b769873e";
+let getcomments = () => {
+    axios
+    .get(`https://project-1-api.herokuapp.com/comments?api_key=${commentsAPIKey}`)
+    .then((results)=>{
+        Commenting(results);
+    })
+    .catch((err) => ('error',err));
+}
+getcomments();
 
+    
 //+1 is added as month is an array starting january as 0.
-let comments = [
-    {
-        'name': "Theodore Duncan",
-        'timestamp': datetime,
-        'comment':"How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
-    },
-    {
-        'name': "Gary Wong",
-        'timestamp': datetime,
-        'comment':"Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!"
-    },
-    {
-        'name': "Michael Lyons",
-        'timestamp': datetime,
-        'comment':"They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
-    }
-];
 
 let divUl = document.createElement("div");
 divUl.setAttribute('id', 'div__form');
 divUl.setAttribute('class', 'div__form');
 document.getElementById('section').appendChild(divUl);
 
-let btn = document.querySelector('.comments__form--submit');
-btn.addEventListener('click', e =>{
+Commenting = (res) =>{
+    comments =  res.data;
+    console.log(comments);
+    let btn = document.querySelector('.comments');
+    btn.addEventListener('submit', e =>{
     e.preventDefault();
     document.getElementById('div__form').innerHTML = "";   //to clear the comments section upon click and then the code runs and re enters all comments.
     let newcomment={};
@@ -104,8 +101,10 @@ btn.addEventListener('click', e =>{
         secli.appendChild(faceimg);
         ulsel[i].prepend(secli);
         }
+    
     }
 )
+
     
 function displayComment(name , timestamp, comment){
     let ul = document.createElement("ul");
@@ -169,4 +168,8 @@ for(var i=0 ; i<comments.length ; i++ ){
     secli.appendChild(faceimg);
     ulsel[i].prepend(secli); 
 }
+}
+
+
+
 

@@ -1,61 +1,14 @@
-let showTime = [
-    {
-        'date': "DATE",
-        'datetext': "Mon Dec 17 2020",
-        'venue':"VENUE",
-        'venueadd':"Ronald Lane",
-        'Location' : "LOCATION",
-        'Locationadd': "San Francisco, CA"
-    },
-    {
-        'date': "DATE",
-        'datetext': "Tue Jul 18 2019",
-        'venue':"VENUE",
-        'venueadd':"Pier 3 East",
-        'Location' : "LOCATION",
-        'Locationadd': "San Francisco, CA"
-    },
-    {
-        'date': "DATE",
-        'datetext': "Fri Jul 22 2019",
-        'venue':"VENUE",
-        'venueadd':"View Loungue",
-        'Location' : "LOCATION",
-        'Locationadd': "San Francisco, CA"
-    },
-    {
-        'date': "DATE",
-        'datetext': "Sat Aug 11 2020",
-        'venue':"VENUE",
-        'venueadd':"Hyatt Agency",
-        'Location' : "LOCATION",
-        'Locationadd': "San Francisco, CA"
-    },
-    {
-        'date': "DATE",
-        'datetext': "Fri Sep 05 2019",
-        'venue':"VENUE",
-        'venueadd':"Moscow Center",
-        'Location' : "LOCATION",
-        'Locationadd': "San Francisco, CA"
-    },
-    {
-        'date': "DATE",
-        'datetext': "Wed Aug 11 2019",
-        'venue':"VENUE",
-        'venueadd':"Press Club",
-        'Location' : "LOCATION",
-        'Locationadd': "San Francisco, CA"
-    }
-];
-
+let commentsAPIKey = "7395cb0b-0998-4427-adcc-f980b769873e";
 let divwrap = document.createElement("div");
 divwrap.setAttribute('class','mainDiv');
 let sec = document.querySelector(".shows");
 sec.appendChild(divwrap);
 
-    
-function displayShows(el1 , el2 , el3, el4 , el5, el6){
+let promise = axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${commentsAPIKey}`);
+promise.then(res =>{
+    let showdates =  res.data;
+    console.log(showdates);   
+function displayComment(el2 , el4 ,el6){
     let divrow = document.createElement("div");
     divrow.setAttribute('class', "row");
     divwrap.appendChild(divrow);
@@ -81,16 +34,16 @@ function displayShows(el1 , el2 , el3, el4 , el5, el6){
     let pel6 = document.createElement('p');
     pel6.setAttribute('class', 'row-child');
     divstyl.appendChild(pel1);
-    pel1.innerHTML = pel1.innerHTML + el1;
-    divstyl.appendChild(pel2);
-    pel2.innerHTML = pel2.innerHTML + el2;
+    pel1.innerHTML = pel1.innerHTML + "DATE";
     divstyl2.appendChild(pel3);
-    pel3.innerHTML = pel3.innerHTML + el3;
+    pel2.innerHTML = pel2.innerHTML + el2;
     divstyl2.appendChild(pel4);
-    pel4.innerHTML = pel4.innerHTML + el4;
+    pel3.innerHTML = pel3.innerHTML + "VENUE";
     divstyl3.appendChild(pel5);
-    pel5.innerHTML = pel5.innerHTML + el5;
+    pel4.innerHTML = pel4.innerHTML + el4;
     divstyl3.appendChild(pel6);
+    pel5.innerHTML = pel5.innerHTML + "LOCATION";
+    divstyl.appendChild(pel2);
     pel6.innerHTML = pel6.innerHTML + el6;
     divcol.innerHTML = divcol.innerHTML+""
     divcol.appendChild(divstyl);
@@ -98,12 +51,11 @@ function displayShows(el1 , el2 , el3, el4 , el5, el6){
     divcol.appendChild(divstyl3);
 }
 
-for(var i = 0;i<showTime.length;i++){
-    displayShows(showTime[i].date ,showTime[i].datetext ,showTime[i].venue ,showTime[i].venueadd ,showTime[i].Location ,showTime[i].Locationadd);
-
+for(var i = 0;i<showdates.length;i++){
+    displayComment(showdates[i].date ,showdates[i].place ,showdates[i].location);
 }
 
-for(var i=0 ; i<showTime.length ; i++ ){
+for(var i=1 ; i<showdates.length+1 ; i++ ){
     let divparent = document.querySelectorAll('.row__column');
     let divbtn = document.createElement('div');
     divbtn.setAttribute('class', 'row__column--styling4')
@@ -114,11 +66,13 @@ for(var i=0 ; i<showTime.length ; i++ ){
     divparent[i].appendChild(divbtn);
 }
 
-for(var i=0;i<showTime.length;i++){
+for(var i=0;i<showdates.length;i++){
     let sechd = document.querySelectorAll(".row");
     let rowhd = sechd[i].querySelector('.row-child');
     rowhd.classList.add('row-child--date');
 }
+});
+promise.catch(err => console.log('error',err));
 
 let mainhd = document.createElement('div');
 mainhd.setAttribute('class', 'row');
@@ -149,3 +103,4 @@ colhd.appendChild(hd4);
 let maindv = document.querySelector('.mainDiv');
 mainhd.appendChild(colhd);
 maindv.prepend(mainhd);
+

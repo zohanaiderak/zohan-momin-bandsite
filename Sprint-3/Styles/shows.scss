@@ -146,18 +146,21 @@
     @include tablet{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     }
     &--styling , &--styling2 , &--styling3{
-     @include tablet{
+      @include tablet{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      flex-basis: 100%;
+      // flex-basis: 90%;
       flex: 1;
      }
+    }
+    &--styling2,&--styling3{
+      margin: 0 15px;
     }
   }
 }

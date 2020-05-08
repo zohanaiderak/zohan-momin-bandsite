@@ -32,11 +32,13 @@ Commenting = (res) =>{
         let pName = document.createElement('p');
         let pTime = document.createElement('p');
         let pComm = document.createElement('p');
+        var mydate = new Date(object.timestamp);
+        var dinmyformat = (mydate.getMonth()+1)+"/"+mydate.getDate()+"/"+mydate.getFullYear();
         ul.appendChild(li);
         li.appendChild(pName);
         pName.innerHTML = pName.innerHTML + object.name;
         li.appendChild(pTime);
-        pTime.innerHTML = pTime.innerHTML + object.timestamp;
+        pTime.innerHTML = pTime.innerHTML + dinmyformat;
         li.appendChild(pTime);
         pComm.innerHTML = pComm.innerHTML + object.comment;
         li.appendChild(pComm);
@@ -84,13 +86,31 @@ Commenting = (res) =>{
         let text = document.getElementById('name');
         let textArea = document.getElementById('textArea');
         newcomment.name = text.value;
+        console.log(text.value);
         newcomment.timestamp = datetime ;
         newcomment.comment = textArea.value;
         comments.push(newcomment);
-    
+        let clrinput = document.querySelector(".comments");
+        let postComments = () =>{
+            // comments = JSON.stringify(comments);
+            axios({
+                method: 'post',
+                url :`https://project-1-api.herokuapp.com/comments?api_key=${commentsAPIKey}`,
+                data:{
+                    name: text.value,
+                    comment :textArea.value
+                }
+            })
+            .then((result)=> {
+              result = comments.data ; 
+            })
+            }
+            postComments(); 
+        clrinput.reset();
         for(var i = 0;i<comments.length;i++){
             displayComment(comments[i]);
         } 
+        console.log(comments);
         for(var i=0 ; i<comments.length ; i++ ){
             let ulsel = document.querySelectorAll('.post');
             let secli = document.createElement('li');
@@ -99,9 +119,11 @@ Commenting = (res) =>{
             faceimg.setAttribute('class', 'post__dp-grey');
             secli.appendChild(faceimg);
             ulsel[i].prepend(secli);
-        }    
+        } 
+          
     })
 }
+
 
 
 

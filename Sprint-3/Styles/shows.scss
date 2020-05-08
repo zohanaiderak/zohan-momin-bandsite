@@ -120,15 +120,23 @@
 }
 
 .shows{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin:32px 0 40px;
   @include padding;
-    margin-bottom: 40px;
+  @include tablet{
+    flex-direction: row;
+    align-items: flex-start;
+  }
   @include desktop{
-    display: flex;
     justify-content: space-between;
   }
   &__head{
+    width:288px ;
     @include h1-mobile;
-    margin: 32px 0 20px;  //it's 40 px but we have additional 20px with div rows to make it 40px.
+    margin-bottom:20px;  //it's 40 px but we have additional 20px with div rows to make it 40px.
+
   }
 }
 
@@ -146,7 +154,6 @@
     @include tablet{
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     }
@@ -155,12 +162,13 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      // flex-basis: 90%;
       flex: 1;
      }
     }
     &--styling2,&--styling3{
+      @include tablet{
       margin: 0 15px;
+      }
     }
   }
 }

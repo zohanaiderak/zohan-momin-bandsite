@@ -1,7 +1,5 @@
-var currentdate = new Date(); 
-var datetime = (currentdate.getMonth()+1)+"/"+currentdate.getDate()+"/"+currentdate.getFullYear();
-
 let commentsAPIKey = "7395cb0b-0998-4427-adcc-f980b769873e";
+
 let getcomments = () => {
     axios
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${commentsAPIKey}`)
@@ -10,10 +8,11 @@ let getcomments = () => {
     })
     .catch((err) => ('error',err));
 }
+
 getcomments();
 
-    
-//+1 is added as month is an array starting january as 0.
+var currentdate = new Date(); 
+var datetime = (currentdate.getMonth()+1)+"/"+currentdate.getDate()+"/"+currentdate.getFullYear();  //+1 is added as month is an array starting january as 0.
 
 let divUl = document.createElement("div");
 divUl.setAttribute('id', 'div__form');
@@ -46,18 +45,23 @@ Commenting = (res) =>{
         let ulComm = document.querySelector(".post");
         let allLi = ulComm.querySelectorAll("li");
         let l= allLi.length;
+        
         for (var i =0 ; i < l; i++){
             allLi[i].classList.add('post__comment');
         }
+        
         let divf = document.querySelector('.div__form')
         let allp = divf.querySelectorAll("p");
         let le= allp.length;
+        
         for (var i =0 ; i < le-1 ; i=i+3){
             allp[i].classList.add('post__comment--name');
         }
+        
         for (var i =le-1 ; i >= 0; i=i-3){
             allp[i].classList.add('post__comment--text');
         }
+        
         for (var i =le-2 ; i >= 0; i=i-3){
             allp[i].classList.add('post__comment--name');
             allp[i].classList.add('timestamp');
@@ -67,7 +71,7 @@ Commenting = (res) =>{
     for(var i = 0;i<comments.length;i++){
         displayComment(comments[i]);
     }
-    
+
     for(var i=0 ; i<comments.length ; i++ ){
         let ulsel = document.querySelectorAll('.post');
         let secli = document.createElement('li');
@@ -77,8 +81,9 @@ Commenting = (res) =>{
         secli.appendChild(faceimg);
         ulsel[i].prepend(secli); 
     }
-    
+
     let btn = document.querySelector('.comments');
+    
     btn.addEventListener('submit', e =>{
         e.preventDefault();
         document.getElementById('div__form').innerHTML = "";   //to clear the comments section upon click and then the code runs and re enters all comments.
@@ -86,13 +91,11 @@ Commenting = (res) =>{
         let text = document.getElementById('name');
         let textArea = document.getElementById('textArea');
         newcomment.name = text.value;
-        console.log(text.value);
         newcomment.timestamp = datetime ;
         newcomment.comment = textArea.value;
         comments.push(newcomment);
-        let clrinput = document.querySelector(".comments");
+        
         let postComments = () =>{
-            // comments = JSON.stringify(comments);
             axios({
                 method: 'post',
                 url :`https://project-1-api.herokuapp.com/comments?api_key=${commentsAPIKey}`,
@@ -104,13 +107,17 @@ Commenting = (res) =>{
             .then((result)=> {
               result = comments.data ; 
             })
-            }
-            postComments(); 
+        }
+        
+        postComments();
+        
+        let clrinput = document.querySelector(".comments"); 
         clrinput.reset();
+        
         for(var i = 0;i<comments.length;i++){
             displayComment(comments[i]);
         } 
-        console.log(comments);
+        
         for(var i=0 ; i<comments.length ; i++ ){
             let ulsel = document.querySelectorAll('.post');
             let secli = document.createElement('li');
@@ -119,10 +126,11 @@ Commenting = (res) =>{
             faceimg.setAttribute('class', 'post__dp-grey');
             secli.appendChild(faceimg);
             ulsel[i].prepend(secli);
-        } 
-          
+        }       
     })
+   
 }
+
 
 
 

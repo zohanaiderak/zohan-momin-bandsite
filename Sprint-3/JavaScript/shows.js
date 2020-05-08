@@ -63,6 +63,7 @@ showTime = (res) =>{
     for(var i = 0;i<showdates.length;i++){
         displayShows(showdates[i]);
     }
+    
     for(var i=0 ; i<showdates.length; i++ ){
         let divparent = document.querySelectorAll('.row__column');
         let divbtn = document.createElement('div');
@@ -73,6 +74,7 @@ showTime = (res) =>{
         divbtn.appendChild(btn);
         divparent[i].appendChild(divbtn);
     }
+    
     for(var i=0;i<showdates.length;i++){
         let sechd = document.querySelectorAll(".row");
         let rowhd = sechd[i].querySelector('.row-child');
@@ -80,29 +82,23 @@ showTime = (res) =>{
     }
     
     let mainhd = document.createElement('div');
-    mainhd.setAttribute('class', 'row');
-    mainhd.classList.add('row__headShow');
+    mainhd.classList.add('row' ,'row__headShow');
     let colhd = document.createElement('div');
-    colhd.setAttribute('class', 'row__column');
-    colhd.classList.add('col-height');
+    colhd.classList.add('row__column','col-height');
     let hd1 = document.createElement('p');
-    hd1.setAttribute('class' , 'row__column--styling');
-    hd1.classList.add('row__head');
+    hd1.classList.add('row__column--styling','row__head');
     hd1.innerText = "DATE";
     colhd.appendChild(hd1);
     let hd2 = document.createElement('p');
-    hd2.setAttribute('class' , 'row__column--styling2');
-    hd2.classList.add('row__head');
+    hd2.classList.add('row__column--styling2' ,'row__head');
     hd2.innerText = "VENUE";
     colhd.appendChild(hd2);
     let hd3 = document.createElement('p');
-    hd3.setAttribute('class' , 'row__column--styling3');
-    hd3.classList.add('row__head');
+    hd3.classList.add('row__column--styling3' ,'row__head');
     hd3.innerText = "LOCATION";
     colhd.appendChild(hd3);
     let hd4 = document.createElement('button');
     hd4.setAttribute('class' , 'btn-hidden');
-    mainhd.classList.add('row__headShow');
     hd4.innerText = "         ";
     colhd.appendChild(hd4);
     let maindv = document.querySelector('.mainDiv');

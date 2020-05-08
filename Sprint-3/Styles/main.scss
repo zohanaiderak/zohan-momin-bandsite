@@ -29,20 +29,20 @@
     align-items: center;
   }
   .nav__div{
-  margin:auto;
-  padding: 0 16px;
-  @include hover;
-  @include mobile{
-    margin: 5px auto 16px;
-  }
-  @include tablet{
-    margin: 0;      //to zero out margin from mobile-site
-    padding-left: 24px;
-    padding-right: 0;  //to zero out right padding from mobile-site
-  }
-  @include desktop{
-    padding-left: 60px;
-  }
+    margin:auto;
+    padding: 0 16px;
+    @include hover;
+    @include mobile{
+      margin: 5px auto 16px;
+    }
+    @include tablet{
+      margin: 0;      //to zero out margin from mobile-site
+      padding-left: 24px;
+      padding-right: 0;  //to zero out right padding from mobile-site
+    }
+    @include desktop{
+      padding-left: 60px;
+    }
   }
   .nav__div2{
     display: flex;
@@ -62,106 +62,106 @@
 }
 
 .hero{
-    background-image: url('../Assets/Images/austin-neill-1t0yY9lSpyE-unsplash.jpg');
-    background-size: cover;
+  background-image: url('../Assets/Images/austin-neill-1t0yY9lSpyE-unsplash.jpg');
+  background-size: cover;
+  display: flex;
+  @include hero-height;
+  &__head{
     display: flex;
+    align-items: center;
+    @include padding;
+    background: rgba($color: #323232, $alpha: 0.5);
+    width: 100%;
+    color: $secondary-color;
+    @include h1-hero;
     @include hero-height;
-    &__head{
-      display: flex;
-      align-items: center;
-      @include padding;
-      background: rgba($color: #323232, $alpha: 0.5);
-      width: 100%;
-      color: $secondary-color;
-      @include h1-hero;
-      @include hero-height;
-    }
+  }
 }
 
 .article{
-    @include padding;
+  @include padding;
+  display: flex;
+  flex-direction: column;
+  &__header{
+    align-self: flex-start;
+    @include h1-mobile;
+    padding: 32px 0 24px;
+    @include desktop{
+      padding: 48px 0;
+    }
+  }
+  &__img{
+    @include section-center;
+    margin-bottom: 24px;
+    @include article-img;
+    @include desktop{
+      margin-bottom: 48px ;
+    }
+  }
+  &__quote{
+    @include section-center;
+    font-family: $font-demi;
+    br{
+      display: none;
+    }
+    @include desktop{
+      padding: 0 92px;
+      br{
+        display: inline;
+      }
+    }
+  }
+  .quote{
+    padding-bottom: 32px;
+    @include quote;
+    @include desktop{
+      padding-bottom:40px ;
+    }
+  }
+  .name{
+    font-family: $font-demi;
+  }
+  .musicians{
+    padding: 40px 0 24px;
+    @include quote;
+    @include desktop{
+      padding: 56px 92px 32px;
+    }
+  }
+  &__para{
+    @include section-center;
     display: flex;
     flex-direction: column;
-    &__header{
-      align-self: flex-start;
-      @include h1-mobile;
-      padding: 32px 0 24px;
-      @include desktop{
-        padding: 48px 0;
-      }
-    }
-    &__img{
-      @include section-center;
-      margin-bottom: 24px;
-      @include article-img;
-      @include desktop{
-        margin-bottom: 48px ;
-      }
-    }
-    &__quote{
-        @include section-center;
-        font-family: $font-demi;
-        br{
-          display: none;
-        }
-        @include desktop{
-          padding: 0 92px;
-          br{
-            display: inline;
-          }
-        }
-    }
-    .quote{
-      padding-bottom: 32px;
-      @include quote;
-      @include desktop{
-        padding-bottom:40px ;
-      }
-    }
-    .name{
-      font-family: $font-demi;
-    }
-    .musicians{
-      padding: 40px 0 24px;
-      @include quote;
-      @include desktop{
-        padding: 56px 92px 32px;
-      }
-    }
-    &__para{
-      @include section-center;
+    color: #323232;
+    @include h4-mobile;
+    @include tablet{
       display: flex;
-      flex-direction: column;
-      color: #323232;
-      @include h4-mobile;
-      @include tablet{
-        display: flex;
-        flex-direction: row;  
-      }
-      @include desktop{
-        padding: 0 92px 48px;
-      }
+      flex-direction: row;  
     }
-    .para1{
-      padding-bottom: 24px;
-      @include tablet{
-        padding-right: 12px;
-      }
-      @include desktop{
-        padding:0 20px 0 0 ;    //this is done to zero out padding bottom from the element and padding in desktop is through parent para class
-        width: 420px;
-      }
+    @include desktop{
+      padding: 0 92px 48px;
     }
-    .para2{
-      padding-bottom: 40px;
-      @include tablet{
-        padding-left: 12px;
-      }
-      @include desktop{
-        padding:0 0 0 20px;    //this is done to zero out padding bottom from the element and padding in desktop is through parent para class
-        width: 420px;
-      }
+  }
+  .para1{
+    padding-bottom: 24px;
+    @include tablet{
+      padding-right: 12px;
     }
+    @include desktop{
+      padding:0 20px 0 0 ;    //this is done to zero out padding bottom from the element and padding in desktop is through parent para class
+      width: 420px;
+    }
+  }
+  .para2{
+    padding-bottom: 40px;
+    @include tablet{
+      padding-left: 12px;
+    }
+    @include desktop{
+      padding:0 0 0 20px;    //this is done to zero out padding bottom from the element and padding in desktop is through parent para class
+      width: 420px;
+    }
+  }
 }
 
 .section{
@@ -169,54 +169,54 @@
   flex-direction: column;
   background-color: $secondary-color;
   padding-bottom: 16px;
-    &__head{
-      align-self: flex-start;
-      @include h1-mobile;
-      @include mobile{
-        padding: 32px 16px 24px;
-      }
-      @include tablet{
-        padding: 32px 0 24px 24px;
-      }
-      @include desktop{
-        padding:48px 0 64px 60px;
-      }
+  &__head{
+    align-self: flex-start;
+    @include h1-mobile;
+    @include mobile{
+      padding: 32px 16px 24px;
     }
-    .img{
+    @include tablet{
+      padding: 32px 0 24px 24px;
+    }
+    @include desktop{
+      padding:48px 0 64px 60px;
+    }
+  }
+  .img{
     align-self: center;
+    @include mobile{
+      padding:0 16px;
+      max-width: 380px;
+    }
+    @include tablet{
+      padding:0 24px 24px;
+      display: flex;
+      justify-content: space-between;
+    }
+    @include desktop{
+      padding:0 0 24px 0;
+      width: 1080px;
+    }
+    &__styl{
+      width: 100%;
+      @include greyscale;
       @include mobile{
-        padding:0 16px;
-        max-width: 380px;
+        display: flex;
+        padding-bottom: 16px;
+        height: 162px;
       }
       @include tablet{
-        padding:0 24px 24px;
-        display: flex;
-        justify-content: space-between;
+        width: 31.1111111%;
+        max-width: 344px;
+        height: 16.40625vw;
+        max-height: 193px;
       }
       @include desktop{
-        padding:0 0 24px 0;
-        width: 1080px;
-      }
-      &__styl{
-        width: 100%;
-        @include greyscale;
-        @include mobile{
-          display: flex;
-          padding-bottom: 16px;
-          height: 162px;
-        }
-        @include tablet{
-          width: 31.1111111%;
-          max-width: 344px;
-          height: 16.40625vw;
-          max-height: 193px;
-        }
-        @include desktop{
-          height: 193px;
-          width: 344px;
+        height: 193px;
+        width: 344px;
       }
     }
-    }
+  }
 }
 
 .section2{
@@ -309,10 +309,11 @@
 #textArea{
   height: 96px;
   @extend .comments__form--input;
-
 }
 
 .div__form{
+  overflow-y: scroll ;
+  height: 450px;
   margin: 0 16px;
   width: 288px;
   border-top: 1px solid $form-color;

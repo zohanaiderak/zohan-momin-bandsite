@@ -25,19 +25,19 @@
     align-items: center;
   }
   .nav__div{
-  margin:auto;
-  padding: 0 16px;
-  @include hover;
-  @include mobile{
-    margin: 5px auto 16px;
-  }
-  @include tablet{
-    margin: 0;      //to zero out margin from mobile-site
-    padding-left: 24px;
-    padding-right: 0;  //to zero out right padding from mobile-site
-  }
-  @include desktop{
-    padding-left: 60px;
+    margin:auto;
+    padding: 0 16px;
+    @include hover;
+    @include mobile{
+      margin: 5px auto 16px;
+    }
+    @include tablet{
+      margin: 0;      //to zero out margin from mobile-site
+      padding-left: 24px;
+      padding-right: 0;  //to zero out right padding from mobile-site
+    }
+    @include desktop{
+      padding-left: 60px;
   }
   }
   .nav__div2{
@@ -45,14 +45,14 @@
     justify-content: space-between;
     box-sizing: border-box;
     &--link1{
-    @include div2;   //hover not applied here as it is current page also applying it creates disruption in border-bottom and requires additional code
-    @include hover;
-    color: #e1e1e1;
+      @include div2;   //hover not applied here as it is current page also applying it creates disruption in border-bottom and requires additional code
+      @include hover;
+      color: #e1e1e1;
     }
     &--link2{
-      @include div2;
       border-bottom: 2px solid $secondary-color;
       color: $secondary-color;
+      @include div2;
       @include tablet{
         width: 80px;
         justify-content: center;
@@ -67,56 +67,56 @@
   @include hero-height-shows;
 }
 .hero{
-    background: rgba($color: #323232, $alpha: 0.5);
+  background: rgba($color: #323232, $alpha: 0.5);
+  display: flex;
+  flex-direction: column;
+  @include padding;
+  @include hero-height-shows;
+  @include desktop{
     display: flex;
-    flex-direction: column;
-    @include padding;
-    @include hero-height-shows;
+    flex-direction: row;
+  }
+  &__text{
+    padding-top: 64px;
+    color: $secondary-color;
+    @include tablet{
+      padding-top: 96px;
+      width: 80%;
+    }
     @include desktop{
+      padding-top: 160px;
+      width: 55%;
+    }
+    &--h3{
+      @include quote;
+      @include tablet{
+      padding-bottom: 48px;
+      }
+    }
+    &--head{
+      @include h1-hero;
+    }
+  }
+  &__song{
+    padding-top: 64px;
+    @include desktop{
+      width: 50%;
+      height: 425px;
+      box-sizing: border-box;
       display: flex;
-      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-end;
+      vertical-align: baseline;
     }
-    &__text{
-        padding-top: 64px;
-        color: $secondary-color;
-        @include tablet{
-          padding-top: 96px;
-          width: 80%;
-        }
-        @include desktop{
-          padding-top: 160px;
-          width: 55%;
-        }
-        &--h3{
-            @include quote;
-            @include tablet{
-            padding-bottom: 48px;
-            }
-        }
-        &--head{
-        @include h1-hero;
-        }
-    }
-    &__song{
-      padding-top: 64px;
-      @include desktop{
-        width: 50%;
-        height: 425px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        vertical-align: baseline;
-      }
-      &--iframe{
-       height : 146px;
-       width: 100%;
-       @include tablet{
-         width: 436px;
-         height: 146px;
-       }
+    &--iframe{
+      height : 146px;
+      width: 100%;
+      @include tablet{
+        width: 436px;
+        height: 146px;
       }
     }
+  }
 }
 
 .shows{
@@ -136,14 +136,13 @@
     width:288px ;
     @include h1-mobile;
     margin-bottom:20px;  //it's 40 px but we have additional 20px with div rows to make it 40px.
-
   }
 }
 
 .mainDiv{
   @include desktop{
     margin-top: 32px;
-      width: 804px;
+    width: 804px;
   }
 }
 
@@ -152,22 +151,22 @@
   border-bottom: 1px solid #e1e1e1 ;  //#004892 isn't mercury
   &__column{
     @include tablet{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
     }
     &--styling , &--styling2 , &--styling3{
       @include tablet{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex: 1;
-     }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+      }
     }
     &--styling2,&--styling3{
       @include tablet{
-      margin: 0 15px;
+        margin: 0 15px;
       }
     }
   }
@@ -185,24 +184,24 @@
     display: none;
     @include tablet{
       display: inline;
-    border: none;
-    padding-bottom: 0;
+      border: none;
+      padding-bottom: 0;
     }
 }
 
 .row__head{
   display: none;
   @include tablet{
-  display: flex;
-  color: $form-color;
-  justify-content: flex-end; 
-  height: 16px;
+    display: flex;
+    color: $form-color;
+    justify-content: flex-end; 
+    height: 16px;
   }
 }
 
 .col-height{
   @include tablet{
-  height: 16px;
+    height: 16px;
   }
 }
 
@@ -229,116 +228,116 @@
     width: 160px;
     margin-top: 0;
   }
-      &:hover{
-        background-color: black;
-      }
-      &:focus{
-        outline: 0;
-        border-radius: 2px;
-        box-shadow: inset 0 40px -4px #000000;
-        filter: blur(32%);
-      }
+  &:hover{
+    background-color: black;
+  }
+  &:focus{
+    outline: 0;
+    border-radius: 2px;
+    box-shadow: inset 0 40px -4px #000000;
+    filter: blur(32%);
+  }
 }
 
 .btn-hidden{
   display: none;
   @extend .shows-button;
   @include tablet{
-  display: inline;
-  visibility: hidden;
+    display: inline;
+    visibility: hidden;
   }
 }
 
 
 .ftr{
-    @include padding;
-    background-color: $primary-color;
-    color: $secondary-color;
-    .footer{
-      @include tablet{
-        display:flex;
+  @include padding;
+  background-color: $primary-color;
+  color: $secondary-color;
+  .footer{
+    @include tablet{
+      display:flex;
+    }
+    @include desktop{
+      padding: 8px 0 16px;   //8px and 16px to add padding to make the overall padding to meet requirements
+    }
+    &__head{
+        @include h1-mobile;
+        font-size: 36px;
+        @include footer-spacing;
       }
-      @include desktop{
-        padding: 8px 0 16px;   //8px and 16px to add padding to make the overall padding to meet requirements
-      }
-      &__head{
-          @include h1-mobile;
-          font-size: 36px;
-          @include footer-spacing;
-        }
-        &__icon{
-          @include tablet{
-            padding: 40px;
-            align-self: center;
-          } 
-          &--img{
-            padding-right:32px;   
-          }
-        }
-        &__site-name{
-          display: none;
-          @include tablet{
-            display: flex;
-            align-self: center;
-            position: absolute;
-            right: 24px;
-          }
-          @include desktop{
-            right: 60px;
-          }
-          img{
-            height: 24px;
-            width: 120px;
-          }
+      &__icon{
+        @include tablet{
+          padding: 40px;
+          align-self: center;
+        } 
+        &--img{
+          padding-right:32px;   
         }
       }
-      .contact{
+      &__site-name{
+        display: none;
         @include tablet{
           display: flex;
-          justify-content: space-between;
+          align-self: center;
+          position: absolute;
+          right: 24px;
         }
         @include desktop{
-          display: flex;
-          justify-content: flex-start;
+          right: 60px;
         }
-        &__mgmt:nth-of-type(odd){
-          @include footer-spacing;
-          @include desktop{
-            padding:0;   //to dissolve the padding
-          }
+        img{
+          height: 24px;
+          width: 120px;
         }
-        &__mgmt{
-          @include tablet{
-            @include footer-spacing;
-          }
-          @include desktop{
-            padding: 0 60px;   //to dissolve the padding
-          }
-          &--name{
-            font-family: $font-medium;
-          }
-          &--add{
-            @include h4-mobile;
-            padding:24px 0;
-          }
-          &--email{
-            @include h4-mobile;
-            color: $secondary-color;
-            text-decoration: none;
-          }
-        }
-      }
-    .copyright{
-      padding-bottom: 40px;
-      @include h4-mobile; 
-      @include tablet{
-        display: flex;
-        br{
-          display: none;
-        }
-      }
-      @include desktop{
-        padding-top: 40px ;
       }
     }
+    .contact{
+      @include tablet{
+        display: flex;
+        justify-content: space-between;
+      }
+      @include desktop{
+        display: flex;
+        justify-content: flex-start;
+      }
+      &__mgmt:nth-of-type(odd){
+        @include footer-spacing;
+        @include desktop{
+          padding:0;   //to dissolve the padding
+        }
+      }
+      &__mgmt{
+        @include tablet{
+          @include footer-spacing;
+        }
+        @include desktop{
+          padding: 0 60px;   //to dissolve the padding
+        }
+        &--name{
+          font-family: $font-medium;
+        }
+        &--add{
+          @include h4-mobile;
+          padding:24px 0;
+        }
+        &--email{
+          @include h4-mobile;
+          color: $secondary-color;
+          text-decoration: none;
+        }
+      }
+    }
+  .copyright{
+    padding-bottom: 40px;
+    @include h4-mobile; 
+    @include tablet{
+      display: flex;
+      br{
+        display: none;
+      }
+    }
+    @include desktop{
+      padding-top: 40px ;
+    }
   }
+}

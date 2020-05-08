@@ -746,6 +746,8 @@
 }
 
 .div__form {
+  overflow-y: scroll;
+  height: 450px;
   margin: 0 16px;
   width: 288px;
   border-top: 1px solid #afafaf;

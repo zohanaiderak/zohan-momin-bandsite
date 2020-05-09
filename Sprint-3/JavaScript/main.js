@@ -16,7 +16,7 @@ var datetime = (currentdate.getMonth()+1)+"/"+currentdate.getDate()+"/"+currentd
 
 let divUl = document.createElement("div");
 divUl.setAttribute('id', 'div__form');
-divUl.setAttribute('class', 'div__form');
+divUl.classList.add('div__form');
 document.getElementById('section').appendChild(divUl);
 
 Commenting = (res) =>{
@@ -25,7 +25,7 @@ Commenting = (res) =>{
 
     let displayComment = (object) =>{
         let ul = document.createElement("ul");
-        ul.setAttribute('class', "post");
+        ul.classList.add("post");
         divUl.prepend(ul);
         let li = document.createElement('li');
         let pName = document.createElement('p');
@@ -75,12 +75,13 @@ Commenting = (res) =>{
     for(var i=0 ; i<comments.length ; i++ ){
         let ulsel = document.querySelectorAll('.post');
         let secli = document.createElement('li');
-        secli.setAttribute('class', 'post__dp')
+        secli.classList.add('post__dp')
         let faceimg = document.createElement('img');
-        faceimg.setAttribute('class', 'post__dp-grey');
+        faceimg.classList.add('post__dp-grey');
         secli.appendChild(faceimg);
         ulsel[i].prepend(secli); 
     }
+    
 
     let btn = document.querySelector('.comments');
     
@@ -121,9 +122,9 @@ Commenting = (res) =>{
         for(var i=0 ; i<comments.length ; i++ ){
             let ulsel = document.querySelectorAll('.post');
             let secli = document.createElement('li');
-            secli.setAttribute('class', 'post__dp')
+            secli.classList.add('post__dp')
             let faceimg = document.createElement('img');
-            faceimg.setAttribute('class', 'post__dp-grey');
+            faceimg.classList.add('post__dp-grey');
             secli.appendChild(faceimg);
             ulsel[i].prepend(secli);
         }       

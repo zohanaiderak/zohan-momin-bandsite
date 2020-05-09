@@ -150,12 +150,12 @@
 }
 
 .header__nav .nav__div2--link2 {
+  border-bottom: 2px solid #fafafa;
+  color: #fafafa;
   text-align: center;
   text-decoration: none;
   padding-bottom: 13px;
   width: 50%;
-  border-bottom: 2px solid #fafafa;
-  color: #fafafa;
 }
 
 @media (min-width: 768px) {
@@ -361,7 +361,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .shows {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -391,6 +391,18 @@
 
 @media (min-width: 768px) {
   .shows__head {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shows__head {
+    width: inherit;
+  }
+}
+
+@media (min-width: 768px) {
+  .shows__head {
     font-size: 36px;
     line-height: 44px;
   }
@@ -398,7 +410,6 @@
 
 @media (min-width: 1200px) {
   .mainDiv {
-    margin-top: 32px;
     width: 804px;
   }
 }

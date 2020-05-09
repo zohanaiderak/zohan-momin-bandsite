@@ -312,7 +312,7 @@
 }
 
 .div__form{
-  overflow-y: scroll ;
+  overflow-y:scroll;
   height: 450px;
   margin: 0 16px;
   width: 288px;
@@ -335,13 +335,9 @@
     justify-content: flex-start;
   }
   &__dp{
-    border: 1px solid $form-color;
     background-color: $form-color;
     @extend .comments__face;
-    margin: 24px 0;
-    @include tablet{
-      margin-right: 16px;
-    }
+    margin: 24px 16px 0 0;
   }
   &__comment{
     width: 240px;
@@ -358,7 +354,8 @@
     &--text{
       padding-top: 16px;
       display: block; 
-      width: 200px;
+      width:100%;
+      padding-right: 5px;
       @include tablet{
         width: 400px; 
       }
@@ -369,7 +366,7 @@
 .timestamp{
   font-weight: normal;
   color: $form-color;
-  padding-left: 15px;
+  padding-right: 5px;
 }
 
 .ftr{

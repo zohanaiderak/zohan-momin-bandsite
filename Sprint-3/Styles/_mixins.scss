@@ -105,3 +105,13 @@
     }
 }
 
+@mixin showsHead-width {
+    width: 288px;
+    @include tablet{
+        width: 100%;
+    }
+    @include desktop{
+        width: inherit;
+    }
+}
+

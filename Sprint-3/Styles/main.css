@@ -801,15 +801,8 @@
 }
 
 .post__dp {
-  border: 1px solid #afafaf;
   background-color: #afafaf;
-  margin: 24px 0;
-}
-
-@media (min-width: 768px) {
-  .post__dp {
-    margin-right: 16px;
-  }
+  margin: 24px 16px 0 0;
 }
 
 .post__comment {
@@ -838,7 +831,8 @@
 .post__comment--text {
   padding-top: 16px;
   display: block;
-  width: 200px;
+  width: 100%;
+  padding-right: 5px;
 }
 
 @media (min-width: 768px) {
@@ -850,7 +844,7 @@
 .timestamp {
   font-weight: normal;
   color: #afafaf;
-  padding-left: 15px;
+  padding-right: 5px;
 }
 
 .ftr {

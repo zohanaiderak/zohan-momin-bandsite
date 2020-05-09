@@ -10,7 +10,7 @@ let getshows = () =>{
 getshows();
 
 let divwrap = document.createElement("div");
-divwrap.setAttribute('class','mainDiv');
+divwrap.classList.add('mainDiv');
 let sec = document.querySelector(".shows");
 sec.appendChild(divwrap);
 
@@ -19,29 +19,29 @@ showTime = (res) =>{
     console.log(showdates);
     function displayShows(object){
         let divrow = document.createElement("div");
-        divrow.setAttribute('class', "row");
+        divrow.classList.add("row");
         divwrap.appendChild(divrow);
         let divcol = document.createElement("div");
-        divcol.setAttribute('class', "row__column");
+        divcol.classList.add("row__column");
         divrow.appendChild(divcol);
         let divstyl = document.createElement("div");
-        divstyl.setAttribute('class', "row__column--styling");
+        divstyl.classList.add("row__column--styling");
         let divstyl2 = document.createElement("div");
-        divstyl2.setAttribute('class', "row__column--styling2");
+        divstyl2.classList.add("row__column--styling2");
         let divstyl3 = document.createElement("div");
-        divstyl3.setAttribute('class', "row__column--styling3");
+        divstyl3.classList.add("row__column--styling3");
         let pel1 = document.createElement('p');
-        pel1.setAttribute('class', 'row-head');
+        pel1.classList.add('row-head');
         let pel2 = document.createElement('p');
-        pel2.setAttribute('class', 'row-child');
+        pel2.classList.add('row-child');
         let pel3 = document.createElement('p');
-        pel3.setAttribute('class', 'row-head');
+        pel3.classList.add('row-head');
         let pel4 = document.createElement('p');
-        pel4.setAttribute('class', 'row-child');
+        pel4.classList.add('row-child');
         let pel5 = document.createElement('p');
-        pel5.setAttribute('class', 'row-head');
+        pel5.classList.add('row-head');
         let pel6 = document.createElement('p');
-        pel6.setAttribute('class', 'row-child');
+        pel6.classList.add('row-child');
         divstyl.appendChild(pel1);
         pel1.innerText = pel1.innerText + "DATE";
         divstyl2.appendChild(pel3);
@@ -67,9 +67,9 @@ showTime = (res) =>{
     for(var i=0 ; i<showdates.length; i++ ){
         let divparent = document.querySelectorAll('.row__column');
         let divbtn = document.createElement('div');
-        divbtn.setAttribute('class', 'row__column--styling4')
+        divbtn.classList.add('row__column--styling4')
         let btn = document.createElement('button');
-        btn.setAttribute('class', 'shows-button');
+        btn.classList.add('shows-button');
         btn.innerText= 'BUY TICKETS'
         divbtn.appendChild(btn);
         divparent[i].appendChild(divbtn);
@@ -98,7 +98,7 @@ showTime = (res) =>{
     hd3.innerText = "LOCATION";
     colhd.appendChild(hd3);
     let hd4 = document.createElement('button');
-    hd4.setAttribute('class' , 'btn-hidden');
+    hd4.classList.add('btn-hidden');
     hd4.innerText = "         ";
     colhd.appendChild(hd4);
     let maindv = document.querySelector('.mainDiv');

@@ -13,7 +13,6 @@ getcomments();
 
 var currentdate = new Date(); 
 var datetime = (currentdate.getMonth()+1)+"/"+currentdate.getDate()+"/"+currentdate.getFullYear();  //+1 is added as month is an array starting january as 0.
-
 let divUl = document.createElement("div");
 divUl.setAttribute('id', 'div__form');
 divUl.classList.add('div__form');
@@ -82,7 +81,6 @@ Commenting = (res) =>{
         ulsel[i].prepend(secli); 
     }
     
-
     let btn = document.querySelector('.comments');
     
     btn.addEventListener('submit', e =>{
@@ -128,8 +126,7 @@ Commenting = (res) =>{
             secli.appendChild(faceimg);
             ulsel[i].prepend(secli);
         }       
-    })
-   
+    })  
 }
 
 
